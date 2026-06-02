@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+
+# Local runtime state
+state/*.json
+!state/.gitkeep
+
+# Scratch files
+tmp/
+
+# Local secrets
+.env
+secrets.json
