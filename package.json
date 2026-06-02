@@ -1,0 +1,16 @@
+{
+  "name": "cricdotcric-x-tg-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Queue-driven X/Twitter automation for the cricdotcric cricket account.",
+  "type": "commonjs",
+  "scripts": {
+    "verify": "node scripts/x-post.js --account cricdotcric --verify",
+    "build:queue": "node scripts/build-ipl-daily-queue.js",
+    "post:daily:dry": "node scripts/post-queue.js ipl-daily-queue.json --dry-run",
+    "post:daily": "node scripts/post-ipl-queue.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

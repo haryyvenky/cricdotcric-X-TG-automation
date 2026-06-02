@@ -1,0 +1,2158 @@
+[
+  {
+    "id": "2026-03-28-preview",
+    "type": "preview",
+    "date": "2026-03-28",
+    "scheduledFor": "2026-03-28T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RCB vs SRH.\n\nVenue: M Chinnaswamy Stadium, Bengaluru. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-03-28",
+      "fixtures": [
+        "RCB vs SRH at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "2026-03-29-review-2026-03-28",
+    "type": "review",
+    "date": "2026-03-29",
+    "scheduledFor": "2026-03-29T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RCB vs SRH at M Chinnaswamy Stadium, Bengaluru.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-03-28",
+      "fixtures": [
+        "RCB vs SRH at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "2026-03-29-preview",
+    "type": "preview",
+    "date": "2026-03-29",
+    "scheduledFor": "2026-03-29T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: MI vs KKR.\n\nVenue: Wankhede Stadium, Mumbai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-03-29",
+      "fixtures": [
+        "MI vs KKR at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        2
+      ]
+    }
+  },
+  {
+    "id": "2026-03-30-review-2026-03-29",
+    "type": "review",
+    "date": "2026-03-30",
+    "scheduledFor": "2026-03-30T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us MI vs KKR at Wankhede Stadium, Mumbai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-03-29",
+      "fixtures": [
+        "MI vs KKR at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        2
+      ]
+    }
+  },
+  {
+    "id": "2026-03-30-preview",
+    "type": "preview",
+    "date": "2026-03-30",
+    "scheduledFor": "2026-03-30T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RR vs CSK.\n\nVenue: ACA Stadium, Guwahati. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-03-30",
+      "fixtures": [
+        "RR vs CSK at ACA Stadium, Guwahati"
+      ],
+      "matchNumbers": [
+        3
+      ]
+    }
+  },
+  {
+    "id": "2026-03-31-review-2026-03-30",
+    "type": "review",
+    "date": "2026-03-31",
+    "scheduledFor": "2026-03-31T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RR vs CSK at ACA Stadium, Guwahati.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-03-30",
+      "fixtures": [
+        "RR vs CSK at ACA Stadium, Guwahati"
+      ],
+      "matchNumbers": [
+        3
+      ]
+    }
+  },
+  {
+    "id": "2026-03-31-preview",
+    "type": "preview",
+    "date": "2026-03-31",
+    "scheduledFor": "2026-03-31T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: PBKS vs GT.\n\nVenue: New International Cricket Stadium, New Chandigarh. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-03-31",
+      "fixtures": [
+        "PBKS vs GT at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        4
+      ]
+    }
+  },
+  {
+    "id": "2026-04-01-review-2026-03-31",
+    "type": "review",
+    "date": "2026-04-01",
+    "scheduledFor": "2026-04-01T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us PBKS vs GT at New International Cricket Stadium, New Chandigarh.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-03-31",
+      "fixtures": [
+        "PBKS vs GT at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        4
+      ]
+    }
+  },
+  {
+    "id": "2026-04-01-preview",
+    "type": "preview",
+    "date": "2026-04-01",
+    "scheduledFor": "2026-04-01T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: LSG vs DC.\n\nVenue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-01",
+      "fixtures": [
+        "LSG vs DC at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        5
+      ]
+    }
+  },
+  {
+    "id": "2026-04-02-review-2026-04-01",
+    "type": "review",
+    "date": "2026-04-02",
+    "scheduledFor": "2026-04-02T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us LSG vs DC at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-01",
+      "fixtures": [
+        "LSG vs DC at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        5
+      ]
+    }
+  },
+  {
+    "id": "2026-04-02-preview",
+    "type": "preview",
+    "date": "2026-04-02",
+    "scheduledFor": "2026-04-02T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: KKR vs SRH.\n\nVenue: Eden Gardens, Kolkata. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-02",
+      "fixtures": [
+        "KKR vs SRH at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        6
+      ]
+    }
+  },
+  {
+    "id": "2026-04-03-review-2026-04-02",
+    "type": "review",
+    "date": "2026-04-03",
+    "scheduledFor": "2026-04-03T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us KKR vs SRH at Eden Gardens, Kolkata.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-02",
+      "fixtures": [
+        "KKR vs SRH at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        6
+      ]
+    }
+  },
+  {
+    "id": "2026-04-03-preview",
+    "type": "preview",
+    "date": "2026-04-03",
+    "scheduledFor": "2026-04-03T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: CSK vs PBKS.\n\nVenue: MA Chidambaram Stadium, Chennai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-03",
+      "fixtures": [
+        "CSK vs PBKS at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        7
+      ]
+    }
+  },
+  {
+    "id": "2026-04-04-review-2026-04-03",
+    "type": "review",
+    "date": "2026-04-04",
+    "scheduledFor": "2026-04-04T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us CSK vs PBKS at MA Chidambaram Stadium, Chennai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-03",
+      "fixtures": [
+        "CSK vs PBKS at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        7
+      ]
+    }
+  },
+  {
+    "id": "2026-04-04-preview",
+    "type": "preview",
+    "date": "2026-04-04",
+    "scheduledFor": "2026-04-04T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• DC vs MI — 3:30 PM IST\n• GT vs RR — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-04",
+      "fixtures": [
+        "DC vs MI at Arun Jaitley Stadium, Delhi",
+        "GT vs RR at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "id": "2026-04-05-review-2026-04-04",
+    "type": "review",
+    "date": "2026-04-05",
+    "scheduledFor": "2026-04-05T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• DC vs MI at Arun Jaitley Stadium, Delhi\n• GT vs RR at Narendra Modi Stadium, Ahmedabad\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-04",
+      "fixtures": [
+        "DC vs MI at Arun Jaitley Stadium, Delhi",
+        "GT vs RR at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "id": "2026-04-05-preview",
+    "type": "preview",
+    "date": "2026-04-05",
+    "scheduledFor": "2026-04-05T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• SRH vs LSG — 3:30 PM IST\n• RCB vs CSK — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-05",
+      "fixtures": [
+        "SRH vs LSG at Rajiv Gandhi International Stadium, Hyderabad",
+        "RCB vs CSK at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "id": "2026-04-06-review-2026-04-05",
+    "type": "review",
+    "date": "2026-04-06",
+    "scheduledFor": "2026-04-06T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• SRH vs LSG at Rajiv Gandhi International Stadium, Hyderabad\n• RCB vs CSK at M Chinnaswamy Stadium, Bengaluru\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-05",
+      "fixtures": [
+        "SRH vs LSG at Rajiv Gandhi International Stadium, Hyderabad",
+        "RCB vs CSK at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "id": "2026-04-06-preview",
+    "type": "preview",
+    "date": "2026-04-06",
+    "scheduledFor": "2026-04-06T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: KKR vs PBKS.\n\nVenue: Eden Gardens, Kolkata. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-06",
+      "fixtures": [
+        "KKR vs PBKS at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        12
+      ]
+    }
+  },
+  {
+    "id": "2026-04-07-review-2026-04-06",
+    "type": "review",
+    "date": "2026-04-07",
+    "scheduledFor": "2026-04-07T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us KKR vs PBKS at Eden Gardens, Kolkata.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-06",
+      "fixtures": [
+        "KKR vs PBKS at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        12
+      ]
+    }
+  },
+  {
+    "id": "2026-04-07-preview",
+    "type": "preview",
+    "date": "2026-04-07",
+    "scheduledFor": "2026-04-07T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RR vs MI.\n\nVenue: ACA Stadium, Guwahati. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-07",
+      "fixtures": [
+        "RR vs MI at ACA Stadium, Guwahati"
+      ],
+      "matchNumbers": [
+        13
+      ]
+    }
+  },
+  {
+    "id": "2026-04-08-review-2026-04-07",
+    "type": "review",
+    "date": "2026-04-08",
+    "scheduledFor": "2026-04-08T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RR vs MI at ACA Stadium, Guwahati.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-07",
+      "fixtures": [
+        "RR vs MI at ACA Stadium, Guwahati"
+      ],
+      "matchNumbers": [
+        13
+      ]
+    }
+  },
+  {
+    "id": "2026-04-08-preview",
+    "type": "preview",
+    "date": "2026-04-08",
+    "scheduledFor": "2026-04-08T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: DC vs GT.\n\nVenue: Arun Jaitley Stadium, Delhi. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-08",
+      "fixtures": [
+        "DC vs GT at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        14
+      ]
+    }
+  },
+  {
+    "id": "2026-04-09-review-2026-04-08",
+    "type": "review",
+    "date": "2026-04-09",
+    "scheduledFor": "2026-04-09T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us DC vs GT at Arun Jaitley Stadium, Delhi.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-08",
+      "fixtures": [
+        "DC vs GT at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        14
+      ]
+    }
+  },
+  {
+    "id": "2026-04-09-preview",
+    "type": "preview",
+    "date": "2026-04-09",
+    "scheduledFor": "2026-04-09T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: KKR vs LSG.\n\nVenue: Eden Gardens, Kolkata. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-09",
+      "fixtures": [
+        "KKR vs LSG at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        15
+      ]
+    }
+  },
+  {
+    "id": "2026-04-10-review-2026-04-09",
+    "type": "review",
+    "date": "2026-04-10",
+    "scheduledFor": "2026-04-10T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us KKR vs LSG at Eden Gardens, Kolkata.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-09",
+      "fixtures": [
+        "KKR vs LSG at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        15
+      ]
+    }
+  },
+  {
+    "id": "2026-04-10-preview",
+    "type": "preview",
+    "date": "2026-04-10",
+    "scheduledFor": "2026-04-10T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RR vs RCB.\n\nVenue: ACA Stadium, Guwahati. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-10",
+      "fixtures": [
+        "RR vs RCB at ACA Stadium, Guwahati"
+      ],
+      "matchNumbers": [
+        16
+      ]
+    }
+  },
+  {
+    "id": "2026-04-11-review-2026-04-10",
+    "type": "review",
+    "date": "2026-04-11",
+    "scheduledFor": "2026-04-11T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RR vs RCB at ACA Stadium, Guwahati.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-10",
+      "fixtures": [
+        "RR vs RCB at ACA Stadium, Guwahati"
+      ],
+      "matchNumbers": [
+        16
+      ]
+    }
+  },
+  {
+    "id": "2026-04-11-preview",
+    "type": "preview",
+    "date": "2026-04-11",
+    "scheduledFor": "2026-04-11T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• PBKS vs SRH — 3:30 PM IST\n• CSK vs DC — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-11",
+      "fixtures": [
+        "PBKS vs SRH at New International Cricket Stadium, New Chandigarh",
+        "CSK vs DC at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        17,
+        18
+      ]
+    }
+  },
+  {
+    "id": "2026-04-12-review-2026-04-11",
+    "type": "review",
+    "date": "2026-04-12",
+    "scheduledFor": "2026-04-12T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• PBKS vs SRH at New International Cricket Stadium, New Chandigarh\n• CSK vs DC at MA Chidambaram Stadium, Chennai\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-11",
+      "fixtures": [
+        "PBKS vs SRH at New International Cricket Stadium, New Chandigarh",
+        "CSK vs DC at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        17,
+        18
+      ]
+    }
+  },
+  {
+    "id": "2026-04-12-preview",
+    "type": "preview",
+    "date": "2026-04-12",
+    "scheduledFor": "2026-04-12T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• LSG vs GT — 3:30 PM IST\n• MI vs RCB — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-12",
+      "fixtures": [
+        "LSG vs GT at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+        "MI vs RCB at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        19,
+        20
+      ]
+    }
+  },
+  {
+    "id": "2026-04-13-review-2026-04-12",
+    "type": "review",
+    "date": "2026-04-13",
+    "scheduledFor": "2026-04-13T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• LSG vs GT at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow\n• MI vs RCB at Wankhede Stadium, Mumbai\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-12",
+      "fixtures": [
+        "LSG vs GT at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+        "MI vs RCB at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        19,
+        20
+      ]
+    }
+  },
+  {
+    "id": "2026-04-13-preview",
+    "type": "preview",
+    "date": "2026-04-13",
+    "scheduledFor": "2026-04-13T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: SRH vs RR.\n\nVenue: Rajiv Gandhi International Stadium, Hyderabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-13",
+      "fixtures": [
+        "SRH vs RR at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        21
+      ]
+    }
+  },
+  {
+    "id": "2026-04-14-review-2026-04-13",
+    "type": "review",
+    "date": "2026-04-14",
+    "scheduledFor": "2026-04-14T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us SRH vs RR at Rajiv Gandhi International Stadium, Hyderabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-13",
+      "fixtures": [
+        "SRH vs RR at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        21
+      ]
+    }
+  },
+  {
+    "id": "2026-04-14-preview",
+    "type": "preview",
+    "date": "2026-04-14",
+    "scheduledFor": "2026-04-14T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: CSK vs KKR.\n\nVenue: MA Chidambaram Stadium, Chennai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-14",
+      "fixtures": [
+        "CSK vs KKR at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        22
+      ]
+    }
+  },
+  {
+    "id": "2026-04-15-review-2026-04-14",
+    "type": "review",
+    "date": "2026-04-15",
+    "scheduledFor": "2026-04-15T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us CSK vs KKR at MA Chidambaram Stadium, Chennai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-14",
+      "fixtures": [
+        "CSK vs KKR at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        22
+      ]
+    }
+  },
+  {
+    "id": "2026-04-15-preview",
+    "type": "preview",
+    "date": "2026-04-15",
+    "scheduledFor": "2026-04-15T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RCB vs LSG.\n\nVenue: M Chinnaswamy Stadium, Bengaluru. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-15",
+      "fixtures": [
+        "RCB vs LSG at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        23
+      ]
+    }
+  },
+  {
+    "id": "2026-04-16-review-2026-04-15",
+    "type": "review",
+    "date": "2026-04-16",
+    "scheduledFor": "2026-04-16T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RCB vs LSG at M Chinnaswamy Stadium, Bengaluru.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-15",
+      "fixtures": [
+        "RCB vs LSG at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        23
+      ]
+    }
+  },
+  {
+    "id": "2026-04-16-preview",
+    "type": "preview",
+    "date": "2026-04-16",
+    "scheduledFor": "2026-04-16T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: MI vs PBKS.\n\nVenue: Wankhede Stadium, Mumbai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-16",
+      "fixtures": [
+        "MI vs PBKS at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        24
+      ]
+    }
+  },
+  {
+    "id": "2026-04-17-review-2026-04-16",
+    "type": "review",
+    "date": "2026-04-17",
+    "scheduledFor": "2026-04-17T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us MI vs PBKS at Wankhede Stadium, Mumbai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-16",
+      "fixtures": [
+        "MI vs PBKS at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        24
+      ]
+    }
+  },
+  {
+    "id": "2026-04-17-preview",
+    "type": "preview",
+    "date": "2026-04-17",
+    "scheduledFor": "2026-04-17T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: GT vs KKR.\n\nVenue: Narendra Modi Stadium, Ahmedabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-17",
+      "fixtures": [
+        "GT vs KKR at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        25
+      ]
+    }
+  },
+  {
+    "id": "2026-04-18-review-2026-04-17",
+    "type": "review",
+    "date": "2026-04-18",
+    "scheduledFor": "2026-04-18T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us GT vs KKR at Narendra Modi Stadium, Ahmedabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-17",
+      "fixtures": [
+        "GT vs KKR at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        25
+      ]
+    }
+  },
+  {
+    "id": "2026-04-18-preview",
+    "type": "preview",
+    "date": "2026-04-18",
+    "scheduledFor": "2026-04-18T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• RCB vs DC — 3:30 PM IST\n• SRH vs CSK — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-18",
+      "fixtures": [
+        "RCB vs DC at M Chinnaswamy Stadium, Bengaluru",
+        "SRH vs CSK at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        26,
+        27
+      ]
+    }
+  },
+  {
+    "id": "2026-04-19-review-2026-04-18",
+    "type": "review",
+    "date": "2026-04-19",
+    "scheduledFor": "2026-04-19T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• RCB vs DC at M Chinnaswamy Stadium, Bengaluru\n• SRH vs CSK at Rajiv Gandhi International Stadium, Hyderabad\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-18",
+      "fixtures": [
+        "RCB vs DC at M Chinnaswamy Stadium, Bengaluru",
+        "SRH vs CSK at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        26,
+        27
+      ]
+    }
+  },
+  {
+    "id": "2026-04-19-preview",
+    "type": "preview",
+    "date": "2026-04-19",
+    "scheduledFor": "2026-04-19T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• KKR vs RR — 3:30 PM IST\n• PBKS vs LSG — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-19",
+      "fixtures": [
+        "KKR vs RR at Eden Gardens, Kolkata",
+        "PBKS vs LSG at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "id": "2026-04-20-review-2026-04-19",
+    "type": "review",
+    "date": "2026-04-20",
+    "scheduledFor": "2026-04-20T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• KKR vs RR at Eden Gardens, Kolkata\n• PBKS vs LSG at New International Cricket Stadium, New Chandigarh\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-19",
+      "fixtures": [
+        "KKR vs RR at Eden Gardens, Kolkata",
+        "PBKS vs LSG at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "id": "2026-04-20-preview",
+    "type": "preview",
+    "date": "2026-04-20",
+    "scheduledFor": "2026-04-20T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: GT vs MI.\n\nVenue: Narendra Modi Stadium, Ahmedabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-20",
+      "fixtures": [
+        "GT vs MI at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        30
+      ]
+    }
+  },
+  {
+    "id": "2026-04-21-review-2026-04-20",
+    "type": "review",
+    "date": "2026-04-21",
+    "scheduledFor": "2026-04-21T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us GT vs MI at Narendra Modi Stadium, Ahmedabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-20",
+      "fixtures": [
+        "GT vs MI at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        30
+      ]
+    }
+  },
+  {
+    "id": "2026-04-21-preview",
+    "type": "preview",
+    "date": "2026-04-21",
+    "scheduledFor": "2026-04-21T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: SRH vs DC.\n\nVenue: Rajiv Gandhi International Stadium, Hyderabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-21",
+      "fixtures": [
+        "SRH vs DC at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        31
+      ]
+    }
+  },
+  {
+    "id": "2026-04-22-review-2026-04-21",
+    "type": "review",
+    "date": "2026-04-22",
+    "scheduledFor": "2026-04-22T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us SRH vs DC at Rajiv Gandhi International Stadium, Hyderabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-21",
+      "fixtures": [
+        "SRH vs DC at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        31
+      ]
+    }
+  },
+  {
+    "id": "2026-04-22-preview",
+    "type": "preview",
+    "date": "2026-04-22",
+    "scheduledFor": "2026-04-22T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: LSG vs RR.\n\nVenue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-22",
+      "fixtures": [
+        "LSG vs RR at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        32
+      ]
+    }
+  },
+  {
+    "id": "2026-04-23-review-2026-04-22",
+    "type": "review",
+    "date": "2026-04-23",
+    "scheduledFor": "2026-04-23T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us LSG vs RR at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-22",
+      "fixtures": [
+        "LSG vs RR at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        32
+      ]
+    }
+  },
+  {
+    "id": "2026-04-23-preview",
+    "type": "preview",
+    "date": "2026-04-23",
+    "scheduledFor": "2026-04-23T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: MI vs CSK.\n\nVenue: Wankhede Stadium, Mumbai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-23",
+      "fixtures": [
+        "MI vs CSK at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        33
+      ]
+    }
+  },
+  {
+    "id": "2026-04-24-review-2026-04-23",
+    "type": "review",
+    "date": "2026-04-24",
+    "scheduledFor": "2026-04-24T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us MI vs CSK at Wankhede Stadium, Mumbai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-23",
+      "fixtures": [
+        "MI vs CSK at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        33
+      ]
+    }
+  },
+  {
+    "id": "2026-04-24-preview",
+    "type": "preview",
+    "date": "2026-04-24",
+    "scheduledFor": "2026-04-24T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RCB vs GT.\n\nVenue: M Chinnaswamy Stadium, Bengaluru. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-24",
+      "fixtures": [
+        "RCB vs GT at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        34
+      ]
+    }
+  },
+  {
+    "id": "2026-04-25-review-2026-04-24",
+    "type": "review",
+    "date": "2026-04-25",
+    "scheduledFor": "2026-04-25T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RCB vs GT at M Chinnaswamy Stadium, Bengaluru.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-24",
+      "fixtures": [
+        "RCB vs GT at M Chinnaswamy Stadium, Bengaluru"
+      ],
+      "matchNumbers": [
+        34
+      ]
+    }
+  },
+  {
+    "id": "2026-04-25-preview",
+    "type": "preview",
+    "date": "2026-04-25",
+    "scheduledFor": "2026-04-25T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• DC vs PBKS — 3:30 PM IST\n• RR vs SRH — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-25",
+      "fixtures": [
+        "DC vs PBKS at Arun Jaitley Stadium, Delhi",
+        "RR vs SRH at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        35,
+        36
+      ]
+    }
+  },
+  {
+    "id": "2026-04-26-review-2026-04-25",
+    "type": "review",
+    "date": "2026-04-26",
+    "scheduledFor": "2026-04-26T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• DC vs PBKS at Arun Jaitley Stadium, Delhi\n• RR vs SRH at Sawai Mansingh Stadium, Jaipur\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-25",
+      "fixtures": [
+        "DC vs PBKS at Arun Jaitley Stadium, Delhi",
+        "RR vs SRH at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        35,
+        36
+      ]
+    }
+  },
+  {
+    "id": "2026-04-26-preview",
+    "type": "preview",
+    "date": "2026-04-26",
+    "scheduledFor": "2026-04-26T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• CSK vs GT — 3:30 PM IST\n• LSG vs KKR — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-04-26",
+      "fixtures": [
+        "CSK vs GT at MA Chidambaram Stadium, Chennai",
+        "LSG vs KKR at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        37,
+        38
+      ]
+    }
+  },
+  {
+    "id": "2026-04-27-review-2026-04-26",
+    "type": "review",
+    "date": "2026-04-27",
+    "scheduledFor": "2026-04-27T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• CSK vs GT at MA Chidambaram Stadium, Chennai\n• LSG vs KKR at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-04-26",
+      "fixtures": [
+        "CSK vs GT at MA Chidambaram Stadium, Chennai",
+        "LSG vs KKR at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        37,
+        38
+      ]
+    }
+  },
+  {
+    "id": "2026-04-27-preview",
+    "type": "preview",
+    "date": "2026-04-27",
+    "scheduledFor": "2026-04-27T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: DC vs RCB.\n\nVenue: Arun Jaitley Stadium, Delhi. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-27",
+      "fixtures": [
+        "DC vs RCB at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        39
+      ]
+    }
+  },
+  {
+    "id": "2026-04-28-review-2026-04-27",
+    "type": "review",
+    "date": "2026-04-28",
+    "scheduledFor": "2026-04-28T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us DC vs RCB at Arun Jaitley Stadium, Delhi.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-27",
+      "fixtures": [
+        "DC vs RCB at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        39
+      ]
+    }
+  },
+  {
+    "id": "2026-04-28-preview",
+    "type": "preview",
+    "date": "2026-04-28",
+    "scheduledFor": "2026-04-28T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: PBKS vs RR.\n\nVenue: New International Cricket Stadium, New Chandigarh. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-28",
+      "fixtures": [
+        "PBKS vs RR at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        40
+      ]
+    }
+  },
+  {
+    "id": "2026-04-29-review-2026-04-28",
+    "type": "review",
+    "date": "2026-04-29",
+    "scheduledFor": "2026-04-29T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us PBKS vs RR at New International Cricket Stadium, New Chandigarh.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-28",
+      "fixtures": [
+        "PBKS vs RR at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        40
+      ]
+    }
+  },
+  {
+    "id": "2026-04-29-preview",
+    "type": "preview",
+    "date": "2026-04-29",
+    "scheduledFor": "2026-04-29T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: MI vs SRH.\n\nVenue: Wankhede Stadium, Mumbai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-29",
+      "fixtures": [
+        "MI vs SRH at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        41
+      ]
+    }
+  },
+  {
+    "id": "2026-04-30-review-2026-04-29",
+    "type": "review",
+    "date": "2026-04-30",
+    "scheduledFor": "2026-04-30T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us MI vs SRH at Wankhede Stadium, Mumbai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-29",
+      "fixtures": [
+        "MI vs SRH at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        41
+      ]
+    }
+  },
+  {
+    "id": "2026-04-30-preview",
+    "type": "preview",
+    "date": "2026-04-30",
+    "scheduledFor": "2026-04-30T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: GT vs RCB.\n\nVenue: Narendra Modi Stadium, Ahmedabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-04-30",
+      "fixtures": [
+        "GT vs RCB at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        42
+      ]
+    }
+  },
+  {
+    "id": "2026-05-01-review-2026-04-30",
+    "type": "review",
+    "date": "2026-05-01",
+    "scheduledFor": "2026-05-01T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us GT vs RCB at Narendra Modi Stadium, Ahmedabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-04-30",
+      "fixtures": [
+        "GT vs RCB at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        42
+      ]
+    }
+  },
+  {
+    "id": "2026-05-01-preview",
+    "type": "preview",
+    "date": "2026-05-01",
+    "scheduledFor": "2026-05-01T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RR vs DC.\n\nVenue: Sawai Mansingh Stadium, Jaipur. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-01",
+      "fixtures": [
+        "RR vs DC at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        43
+      ]
+    }
+  },
+  {
+    "id": "2026-05-02-review-2026-05-01",
+    "type": "review",
+    "date": "2026-05-02",
+    "scheduledFor": "2026-05-02T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RR vs DC at Sawai Mansingh Stadium, Jaipur.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-01",
+      "fixtures": [
+        "RR vs DC at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        43
+      ]
+    }
+  },
+  {
+    "id": "2026-05-02-preview",
+    "type": "preview",
+    "date": "2026-05-02",
+    "scheduledFor": "2026-05-02T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: CSK vs MI.\n\nVenue: MA Chidambaram Stadium, Chennai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-02",
+      "fixtures": [
+        "CSK vs MI at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        44
+      ]
+    }
+  },
+  {
+    "id": "2026-05-03-review-2026-05-02",
+    "type": "review",
+    "date": "2026-05-03",
+    "scheduledFor": "2026-05-03T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us CSK vs MI at MA Chidambaram Stadium, Chennai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-02",
+      "fixtures": [
+        "CSK vs MI at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        44
+      ]
+    }
+  },
+  {
+    "id": "2026-05-03-preview",
+    "type": "preview",
+    "date": "2026-05-03",
+    "scheduledFor": "2026-05-03T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• SRH vs KKR — 3:30 PM IST\n• GT vs PBKS — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-05-03",
+      "fixtures": [
+        "SRH vs KKR at Rajiv Gandhi International Stadium, Hyderabad",
+        "GT vs PBKS at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        45,
+        46
+      ]
+    }
+  },
+  {
+    "id": "2026-05-04-review-2026-05-03",
+    "type": "review",
+    "date": "2026-05-04",
+    "scheduledFor": "2026-05-04T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• SRH vs KKR at Rajiv Gandhi International Stadium, Hyderabad\n• GT vs PBKS at Narendra Modi Stadium, Ahmedabad\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-05-03",
+      "fixtures": [
+        "SRH vs KKR at Rajiv Gandhi International Stadium, Hyderabad",
+        "GT vs PBKS at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        45,
+        46
+      ]
+    }
+  },
+  {
+    "id": "2026-05-04-preview",
+    "type": "preview",
+    "date": "2026-05-04",
+    "scheduledFor": "2026-05-04T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: MI vs LSG.\n\nVenue: Wankhede Stadium, Mumbai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-04",
+      "fixtures": [
+        "MI vs LSG at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        47
+      ]
+    }
+  },
+  {
+    "id": "2026-05-05-review-2026-05-04",
+    "type": "review",
+    "date": "2026-05-05",
+    "scheduledFor": "2026-05-05T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us MI vs LSG at Wankhede Stadium, Mumbai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-04",
+      "fixtures": [
+        "MI vs LSG at Wankhede Stadium, Mumbai"
+      ],
+      "matchNumbers": [
+        47
+      ]
+    }
+  },
+  {
+    "id": "2026-05-05-preview",
+    "type": "preview",
+    "date": "2026-05-05",
+    "scheduledFor": "2026-05-05T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: DC vs CSK.\n\nVenue: Arun Jaitley Stadium, Delhi. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-05",
+      "fixtures": [
+        "DC vs CSK at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        48
+      ]
+    }
+  },
+  {
+    "id": "2026-05-06-review-2026-05-05",
+    "type": "review",
+    "date": "2026-05-06",
+    "scheduledFor": "2026-05-06T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us DC vs CSK at Arun Jaitley Stadium, Delhi.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-05",
+      "fixtures": [
+        "DC vs CSK at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        48
+      ]
+    }
+  },
+  {
+    "id": "2026-05-06-preview",
+    "type": "preview",
+    "date": "2026-05-06",
+    "scheduledFor": "2026-05-06T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: SRH vs PBKS.\n\nVenue: Rajiv Gandhi International Stadium, Hyderabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-06",
+      "fixtures": [
+        "SRH vs PBKS at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        49
+      ]
+    }
+  },
+  {
+    "id": "2026-05-07-review-2026-05-06",
+    "type": "review",
+    "date": "2026-05-07",
+    "scheduledFor": "2026-05-07T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us SRH vs PBKS at Rajiv Gandhi International Stadium, Hyderabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-06",
+      "fixtures": [
+        "SRH vs PBKS at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        49
+      ]
+    }
+  },
+  {
+    "id": "2026-05-07-preview",
+    "type": "preview",
+    "date": "2026-05-07",
+    "scheduledFor": "2026-05-07T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: LSG vs RCB.\n\nVenue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-07",
+      "fixtures": [
+        "LSG vs RCB at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        50
+      ]
+    }
+  },
+  {
+    "id": "2026-05-08-review-2026-05-07",
+    "type": "review",
+    "date": "2026-05-08",
+    "scheduledFor": "2026-05-08T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us LSG vs RCB at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-07",
+      "fixtures": [
+        "LSG vs RCB at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        50
+      ]
+    }
+  },
+  {
+    "id": "2026-05-08-preview",
+    "type": "preview",
+    "date": "2026-05-08",
+    "scheduledFor": "2026-05-08T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: DC vs KKR.\n\nVenue: Arun Jaitley Stadium, Delhi. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-08",
+      "fixtures": [
+        "DC vs KKR at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        51
+      ]
+    }
+  },
+  {
+    "id": "2026-05-09-review-2026-05-08",
+    "type": "review",
+    "date": "2026-05-09",
+    "scheduledFor": "2026-05-09T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us DC vs KKR at Arun Jaitley Stadium, Delhi.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-08",
+      "fixtures": [
+        "DC vs KKR at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        51
+      ]
+    }
+  },
+  {
+    "id": "2026-05-09-preview",
+    "type": "preview",
+    "date": "2026-05-09",
+    "scheduledFor": "2026-05-09T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RR vs GT.\n\nVenue: Sawai Mansingh Stadium, Jaipur. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-09",
+      "fixtures": [
+        "RR vs GT at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        52
+      ]
+    }
+  },
+  {
+    "id": "2026-05-10-review-2026-05-09",
+    "type": "review",
+    "date": "2026-05-10",
+    "scheduledFor": "2026-05-10T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RR vs GT at Sawai Mansingh Stadium, Jaipur.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-09",
+      "fixtures": [
+        "RR vs GT at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        52
+      ]
+    }
+  },
+  {
+    "id": "2026-05-10-preview",
+    "type": "preview",
+    "date": "2026-05-10",
+    "scheduledFor": "2026-05-10T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• CSK vs LSG — 3:30 PM IST\n• RCB vs MI — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-05-10",
+      "fixtures": [
+        "CSK vs LSG at MA Chidambaram Stadium, Chennai",
+        "RCB vs MI at Shaheed Veer Narayan Singh International Cricket Stadium, Raipur"
+      ],
+      "matchNumbers": [
+        53,
+        54
+      ]
+    }
+  },
+  {
+    "id": "2026-05-11-review-2026-05-10",
+    "type": "review",
+    "date": "2026-05-11",
+    "scheduledFor": "2026-05-11T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• CSK vs LSG at MA Chidambaram Stadium, Chennai\n• RCB vs MI at Shaheed Veer Narayan Singh International Cricket Stadium, Raipur\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-05-10",
+      "fixtures": [
+        "CSK vs LSG at MA Chidambaram Stadium, Chennai",
+        "RCB vs MI at Shaheed Veer Narayan Singh International Cricket Stadium, Raipur"
+      ],
+      "matchNumbers": [
+        53,
+        54
+      ]
+    }
+  },
+  {
+    "id": "2026-05-11-preview",
+    "type": "preview",
+    "date": "2026-05-11",
+    "scheduledFor": "2026-05-11T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: PBKS vs DC.\n\nVenue: Himachal Pradesh Cricket Association Stadium, Dharamshala. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-11",
+      "fixtures": [
+        "PBKS vs DC at Himachal Pradesh Cricket Association Stadium, Dharamshala"
+      ],
+      "matchNumbers": [
+        55
+      ]
+    }
+  },
+  {
+    "id": "2026-05-12-review-2026-05-11",
+    "type": "review",
+    "date": "2026-05-12",
+    "scheduledFor": "2026-05-12T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us PBKS vs DC at Himachal Pradesh Cricket Association Stadium, Dharamshala.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-11",
+      "fixtures": [
+        "PBKS vs DC at Himachal Pradesh Cricket Association Stadium, Dharamshala"
+      ],
+      "matchNumbers": [
+        55
+      ]
+    }
+  },
+  {
+    "id": "2026-05-12-preview",
+    "type": "preview",
+    "date": "2026-05-12",
+    "scheduledFor": "2026-05-12T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: GT vs SRH.\n\nVenue: Narendra Modi Stadium, Ahmedabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-12",
+      "fixtures": [
+        "GT vs SRH at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        56
+      ]
+    }
+  },
+  {
+    "id": "2026-05-13-review-2026-05-12",
+    "type": "review",
+    "date": "2026-05-13",
+    "scheduledFor": "2026-05-13T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us GT vs SRH at Narendra Modi Stadium, Ahmedabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-12",
+      "fixtures": [
+        "GT vs SRH at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        56
+      ]
+    }
+  },
+  {
+    "id": "2026-05-13-preview",
+    "type": "preview",
+    "date": "2026-05-13",
+    "scheduledFor": "2026-05-13T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RCB vs KKR.\n\nVenue: Shaheed Veer Narayan Singh International Cricket Stadium, Raipur. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-13",
+      "fixtures": [
+        "RCB vs KKR at Shaheed Veer Narayan Singh International Cricket Stadium, Raipur"
+      ],
+      "matchNumbers": [
+        57
+      ]
+    }
+  },
+  {
+    "id": "2026-05-14-review-2026-05-13",
+    "type": "review",
+    "date": "2026-05-14",
+    "scheduledFor": "2026-05-14T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RCB vs KKR at Shaheed Veer Narayan Singh International Cricket Stadium, Raipur.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-13",
+      "fixtures": [
+        "RCB vs KKR at Shaheed Veer Narayan Singh International Cricket Stadium, Raipur"
+      ],
+      "matchNumbers": [
+        57
+      ]
+    }
+  },
+  {
+    "id": "2026-05-14-preview",
+    "type": "preview",
+    "date": "2026-05-14",
+    "scheduledFor": "2026-05-14T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: PBKS vs MI.\n\nVenue: Himachal Pradesh Cricket Association Stadium, Dharamshala. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-14",
+      "fixtures": [
+        "PBKS vs MI at Himachal Pradesh Cricket Association Stadium, Dharamshala"
+      ],
+      "matchNumbers": [
+        58
+      ]
+    }
+  },
+  {
+    "id": "2026-05-15-review-2026-05-14",
+    "type": "review",
+    "date": "2026-05-15",
+    "scheduledFor": "2026-05-15T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us PBKS vs MI at Himachal Pradesh Cricket Association Stadium, Dharamshala.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-14",
+      "fixtures": [
+        "PBKS vs MI at Himachal Pradesh Cricket Association Stadium, Dharamshala"
+      ],
+      "matchNumbers": [
+        58
+      ]
+    }
+  },
+  {
+    "id": "2026-05-15-preview",
+    "type": "preview",
+    "date": "2026-05-15",
+    "scheduledFor": "2026-05-15T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: LSG vs CSK.\n\nVenue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-15",
+      "fixtures": [
+        "LSG vs CSK at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        59
+      ]
+    }
+  },
+  {
+    "id": "2026-05-16-review-2026-05-15",
+    "type": "review",
+    "date": "2026-05-16",
+    "scheduledFor": "2026-05-16T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us LSG vs CSK at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-15",
+      "fixtures": [
+        "LSG vs CSK at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        59
+      ]
+    }
+  },
+  {
+    "id": "2026-05-16-preview",
+    "type": "preview",
+    "date": "2026-05-16",
+    "scheduledFor": "2026-05-16T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: KKR vs GT.\n\nVenue: Eden Gardens, Kolkata. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-16",
+      "fixtures": [
+        "KKR vs GT at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        60
+      ]
+    }
+  },
+  {
+    "id": "2026-05-17-review-2026-05-16",
+    "type": "review",
+    "date": "2026-05-17",
+    "scheduledFor": "2026-05-17T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us KKR vs GT at Eden Gardens, Kolkata.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-16",
+      "fixtures": [
+        "KKR vs GT at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        60
+      ]
+    }
+  },
+  {
+    "id": "2026-05-17-preview",
+    "type": "preview",
+    "date": "2026-05-17",
+    "scheduledFor": "2026-05-17T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• PBKS vs RCB — 3:30 PM IST\n• DC vs RR — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-05-17",
+      "fixtures": [
+        "PBKS vs RCB at Himachal Pradesh Cricket Association Stadium, Dharamshala",
+        "DC vs RR at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        61,
+        62
+      ]
+    }
+  },
+  {
+    "id": "2026-05-18-review-2026-05-17",
+    "type": "review",
+    "date": "2026-05-18",
+    "scheduledFor": "2026-05-18T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• PBKS vs RCB at Himachal Pradesh Cricket Association Stadium, Dharamshala\n• DC vs RR at Arun Jaitley Stadium, Delhi\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-05-17",
+      "fixtures": [
+        "PBKS vs RCB at Himachal Pradesh Cricket Association Stadium, Dharamshala",
+        "DC vs RR at Arun Jaitley Stadium, Delhi"
+      ],
+      "matchNumbers": [
+        61,
+        62
+      ]
+    }
+  },
+  {
+    "id": "2026-05-18-preview",
+    "type": "preview",
+    "date": "2026-05-18",
+    "scheduledFor": "2026-05-18T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: CSK vs SRH.\n\nVenue: MA Chidambaram Stadium, Chennai. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-18",
+      "fixtures": [
+        "CSK vs SRH at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        63
+      ]
+    }
+  },
+  {
+    "id": "2026-05-19-review-2026-05-18",
+    "type": "review",
+    "date": "2026-05-19",
+    "scheduledFor": "2026-05-19T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us CSK vs SRH at MA Chidambaram Stadium, Chennai.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-18",
+      "fixtures": [
+        "CSK vs SRH at MA Chidambaram Stadium, Chennai"
+      ],
+      "matchNumbers": [
+        63
+      ]
+    }
+  },
+  {
+    "id": "2026-05-19-preview",
+    "type": "preview",
+    "date": "2026-05-19",
+    "scheduledFor": "2026-05-19T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RR vs LSG.\n\nVenue: Sawai Mansingh Stadium, Jaipur. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-19",
+      "fixtures": [
+        "RR vs LSG at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        64
+      ]
+    }
+  },
+  {
+    "id": "2026-05-20-review-2026-05-19",
+    "type": "review",
+    "date": "2026-05-20",
+    "scheduledFor": "2026-05-20T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RR vs LSG at Sawai Mansingh Stadium, Jaipur.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-19",
+      "fixtures": [
+        "RR vs LSG at Sawai Mansingh Stadium, Jaipur"
+      ],
+      "matchNumbers": [
+        64
+      ]
+    }
+  },
+  {
+    "id": "2026-05-20-preview",
+    "type": "preview",
+    "date": "2026-05-20",
+    "scheduledFor": "2026-05-20T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: KKR vs MI.\n\nVenue: Eden Gardens, Kolkata. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-20",
+      "fixtures": [
+        "KKR vs MI at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        65
+      ]
+    }
+  },
+  {
+    "id": "2026-05-21-review-2026-05-20",
+    "type": "review",
+    "date": "2026-05-21",
+    "scheduledFor": "2026-05-21T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us KKR vs MI at Eden Gardens, Kolkata.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-20",
+      "fixtures": [
+        "KKR vs MI at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        65
+      ]
+    }
+  },
+  {
+    "id": "2026-05-21-preview",
+    "type": "preview",
+    "date": "2026-05-21",
+    "scheduledFor": "2026-05-21T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: GT vs CSK.\n\nVenue: Narendra Modi Stadium, Ahmedabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-21",
+      "fixtures": [
+        "GT vs CSK at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        66
+      ]
+    }
+  },
+  {
+    "id": "2026-05-22-review-2026-05-21",
+    "type": "review",
+    "date": "2026-05-22",
+    "scheduledFor": "2026-05-22T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us GT vs CSK at Narendra Modi Stadium, Ahmedabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-21",
+      "fixtures": [
+        "GT vs CSK at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        66
+      ]
+    }
+  },
+  {
+    "id": "2026-05-22-preview",
+    "type": "preview",
+    "date": "2026-05-22",
+    "scheduledFor": "2026-05-22T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: SRH vs RCB.\n\nVenue: Rajiv Gandhi International Stadium, Hyderabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-22",
+      "fixtures": [
+        "SRH vs RCB at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        67
+      ]
+    }
+  },
+  {
+    "id": "2026-05-23-review-2026-05-22",
+    "type": "review",
+    "date": "2026-05-23",
+    "scheduledFor": "2026-05-23T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us SRH vs RCB at Rajiv Gandhi International Stadium, Hyderabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-22",
+      "fixtures": [
+        "SRH vs RCB at Rajiv Gandhi International Stadium, Hyderabad"
+      ],
+      "matchNumbers": [
+        67
+      ]
+    }
+  },
+  {
+    "id": "2026-05-23-preview",
+    "type": "preview",
+    "date": "2026-05-23",
+    "scheduledFor": "2026-05-23T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: LSG vs PBKS.\n\nVenue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-23",
+      "fixtures": [
+        "LSG vs PBKS at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        68
+      ]
+    }
+  },
+  {
+    "id": "2026-05-24-review-2026-05-23",
+    "type": "review",
+    "date": "2026-05-24",
+    "scheduledFor": "2026-05-24T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us LSG vs PBKS at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-23",
+      "fixtures": [
+        "LSG vs PBKS at Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+      ],
+      "matchNumbers": [
+        68
+      ]
+    }
+  },
+  {
+    "id": "2026-05-24-preview",
+    "type": "preview",
+    "date": "2026-05-24",
+    "scheduledFor": "2026-05-24T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Double-header day in the IPL.\n\n• MI vs RR — 3:30 PM IST\n• KKR vs DC — 7:30 PM IST\n\nTwo games, one calendar date, absolutely no reason to expect calm. We will take the chaos as scheduled. ⚡",
+    "metadata": {
+      "matchDate": "2026-05-24",
+      "fixtures": [
+        "MI vs RR at Wankhede Stadium, Mumbai",
+        "KKR vs DC at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        69,
+        70
+      ]
+    }
+  },
+  {
+    "id": "2026-05-25-review-2026-05-24",
+    "type": "review",
+    "date": "2026-05-25",
+    "scheduledFor": "2026-05-25T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Yesterday delivered a full IPL double-header.\n\n• MI vs RR at Wankhede Stadium, Mumbai\n• KKR vs DC at Eden Gardens, Kolkata\n\nOne afternoon game, one night game, and enough plotlines to keep the league machine properly overheated. 💥",
+    "metadata": {
+      "sourceMatchDate": "2026-05-24",
+      "fixtures": [
+        "MI vs RR at Wankhede Stadium, Mumbai",
+        "KKR vs DC at Eden Gardens, Kolkata"
+      ],
+      "matchNumbers": [
+        69,
+        70
+      ]
+    }
+  },
+  {
+    "id": "2026-05-26-preview",
+    "type": "preview",
+    "date": "2026-05-26",
+    "scheduledFor": "2026-05-26T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RCB vs GT.\n\nVenue: Himachal Pradesh Cricket Association Stadium, Dharamshala. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-26",
+      "fixtures": [
+        "RCB vs GT at Himachal Pradesh Cricket Association Stadium, Dharamshala"
+      ],
+      "matchNumbers": [
+        71
+      ]
+    }
+  },
+  {
+    "id": "2026-05-27-review-2026-05-26",
+    "type": "review",
+    "date": "2026-05-27",
+    "scheduledFor": "2026-05-27T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RCB vs GT at Himachal Pradesh Cricket Association Stadium, Dharamshala.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-26",
+      "fixtures": [
+        "RCB vs GT at Himachal Pradesh Cricket Association Stadium, Dharamshala"
+      ],
+      "matchNumbers": [
+        71
+      ]
+    }
+  },
+  {
+    "id": "2026-05-27-preview",
+    "type": "preview",
+    "date": "2026-05-27",
+    "scheduledFor": "2026-05-27T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: SRH vs RR.\n\nVenue: New International Cricket Stadium, New Chandigarh. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-27",
+      "fixtures": [
+        "SRH vs RR at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        72
+      ]
+    }
+  },
+  {
+    "id": "2026-05-28-review-2026-05-27",
+    "type": "review",
+    "date": "2026-05-28",
+    "scheduledFor": "2026-05-28T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us SRH vs RR at New International Cricket Stadium, New Chandigarh.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-27",
+      "fixtures": [
+        "SRH vs RR at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        72
+      ]
+    }
+  },
+  {
+    "id": "2026-05-29-preview",
+    "type": "preview",
+    "date": "2026-05-29",
+    "scheduledFor": "2026-05-29T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: GT vs RR.\n\nVenue: New International Cricket Stadium, New Chandigarh. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-29",
+      "fixtures": [
+        "GT vs RR at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        73
+      ]
+    }
+  },
+  {
+    "id": "2026-05-30-review-2026-05-29",
+    "type": "review",
+    "date": "2026-05-30",
+    "scheduledFor": "2026-05-30T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us GT vs RR at New International Cricket Stadium, New Chandigarh.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-29",
+      "fixtures": [
+        "GT vs RR at New International Cricket Stadium, New Chandigarh"
+      ],
+      "matchNumbers": [
+        73
+      ]
+    }
+  },
+  {
+    "id": "2026-05-31-preview",
+    "type": "preview",
+    "date": "2026-05-31",
+    "scheduledFor": "2026-05-31T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "IPL today: RCB vs GT.\n\nVenue: Narendra Modi Stadium, Ahmedabad. Start: 7:30 PM IST.\n\nNew day, new noise, fresh overreactions. Exactly how this league should operate. 🔥",
+    "metadata": {
+      "matchDate": "2026-05-31",
+      "fixtures": [
+        "RCB vs GT at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        74
+      ]
+    }
+  },
+  {
+    "id": "2026-06-01-review-2026-05-31",
+    "type": "review",
+    "date": "2026-06-01",
+    "scheduledFor": "2026-06-01T12:15:00+08:00",
+    "account": "cricdotcric",
+    "tweet": "Last night gave us RCB vs GT at Narendra Modi Stadium, Ahmedabad.\n\nEarly-season tables are temporary. The noise, the swings and the instant agenda-setting are the real constants. IPL business as usual. 🎬",
+    "metadata": {
+      "sourceMatchDate": "2026-05-31",
+      "fixtures": [
+        "RCB vs GT at Narendra Modi Stadium, Ahmedabad"
+      ],
+      "matchNumbers": [
+        74
+      ]
+    }
+  }
+]
