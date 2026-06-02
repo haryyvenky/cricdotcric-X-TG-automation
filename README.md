@@ -11,6 +11,19 @@ clean, reviewable repository:
 - durable posting state for idempotent runs
 - clear separation between implementation, content, docs, and runtime state
 
+## What This Demonstrates
+
+This repository is useful as an engineering sample because it combines:
+
+- workflow automation
+- external API integration
+- content validation and operational safeguards
+- scheduler-aware design
+- separation of code, config, content, and runtime state
+
+It is intentionally small enough to review quickly while still showing real
+system design decisions.
+
 ## What It Does
 
 The system manages two types of publishing flows:
