@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.cricdotcric.draft</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/haryyvenky/cricdotcric-X-TG-automation/scripts/agent-run.sh</string>
+    <string>draft</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/haryyvenky/cricdotcric-X-TG-automation</string>
+  <!-- 14:00 local time (Mac is UTC+8 = SGT), daily -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>14</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/haryyvenky/cricdotcric-X-TG-automation/state/logs/launchd-draft.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/haryyvenky/cricdotcric-X-TG-automation/state/logs/launchd-draft.err</string>
+</dict>
+</plist>

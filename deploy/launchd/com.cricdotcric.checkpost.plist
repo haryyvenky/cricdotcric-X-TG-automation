@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.cricdotcric.checkpost</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/haryyvenky/cricdotcric-X-TG-automation/scripts/agent-run.sh</string>
+    <string>check-and-post</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/haryyvenky/cricdotcric-X-TG-automation</string>
+  <!-- A spread of afternoon/evening times to catch your Telegram approval the
+       same day without polling around the clock. Tune as you like. -->
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>15</integer></dict>
+    <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>45</integer></dict>
+    <dict><key>Hour</key><integer>15</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>30</integer></dict>
+    <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>22</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
+  <key>StandardOutPath</key>
+  <string>/Users/haryyvenky/cricdotcric-X-TG-automation/state/logs/launchd-checkpost.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/haryyvenky/cricdotcric-X-TG-automation/state/logs/launchd-checkpost.err</string>
+</dict>
+</plist>
