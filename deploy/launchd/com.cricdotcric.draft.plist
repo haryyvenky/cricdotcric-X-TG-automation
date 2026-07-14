@@ -6,9 +6,8 @@
   <string>com.cricdotcric.draft</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/bin/bash</string>
-    <string>/Users/haryyvenky/cricdotcric-X-TG-automation/scripts/agent-run.sh</string>
-    <string>draft</string>
+    <string>/usr/local/bin/node</string>
+    <string>/Users/haryyvenky/cricdotcric-X-TG-automation/scripts/draft-reminder.js</string>
   </array>
   <key>WorkingDirectory</key>
   <string>/Users/haryyvenky/cricdotcric-X-TG-automation</string>
