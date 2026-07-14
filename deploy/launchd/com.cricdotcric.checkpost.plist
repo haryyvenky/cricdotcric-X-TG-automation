@@ -12,6 +12,10 @@
   </array>
   <key>WorkingDirectory</key>
   <string>/Users/haryyvenky/cricdotcric-X-TG-automation</string>
+  <!-- Also run on load (login / wake / boot) so approvals get posted as soon as
+       the Mac comes on. -->
+  <key>RunAtLoad</key>
+  <true/>
   <!-- A spread of afternoon/evening times to catch your Telegram approval the
        same day without polling around the clock. Tune as you like. -->
   <key>StartCalendarInterval</key>
