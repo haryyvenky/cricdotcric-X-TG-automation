@@ -56,6 +56,15 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
    - `unknown` → ignore (it was not an approval reply).
 4. Never post an item already recorded in `state/queue-state.json`.
 
+## Strict content rules (NEVER violate)
+1. **Voice:** funny, eccentric, editorial — never bland or boring.
+2. **Image = live action:** always players/teams IN ACTION on the cricket field.
+   No posed portraits, headshots, or off-field/handshake/ceremony photos.
+3. **Format-correct kit:** the players' jersey MUST match the format being covered —
+   Test → whites; ODI → coloured ODI kit; T20I → T20 kit; franchise (IPL/BBL/PSL/etc.)
+   → that franchise's jersey. Wrong-format kit (e.g. Test whites on an ODI post) =
+   reject and re-source the image.
+
 ## Guardrails
 - One tweet per fixture side (one preview, one review). No threads.
 - Image must match the tweet subject. Generic/low-res images are rejected.
