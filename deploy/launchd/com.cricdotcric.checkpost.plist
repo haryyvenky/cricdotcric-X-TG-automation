@@ -6,9 +6,8 @@
   <string>com.cricdotcric.checkpost</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/bin/bash</string>
-    <string>/Users/haryyvenky/cricdotcric-X-TG-automation/scripts/agent-run.sh</string>
-    <string>check-and-post</string>
+    <string>/usr/local/bin/node</string>
+    <string>/Users/haryyvenky/cricdotcric-X-TG-automation/scripts/check-and-post.js</string>
   </array>
   <key>WorkingDirectory</key>
   <string>/Users/haryyvenky/cricdotcric-X-TG-automation</string>
