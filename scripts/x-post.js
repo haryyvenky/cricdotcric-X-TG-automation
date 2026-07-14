@@ -21,13 +21,16 @@ function hasArg(name) {
 const account = getArg('--account');
 if (!account) usage();
 
-const secretsPath = process.env.CRICDOTCRIC_SECRETS_FILE || path.join(process.env.HOME, '.openclaw', 'secrets.json');
-if (!fs.existsSync(secretsPath)) {
-  console.error(`Secrets file not found: ${secretsPath}`);
+const { loadSecrets, getTwitterCreds } = require('./config');
+
+let secrets;
+try {
+  secrets = loadSecrets();
+} catch (err) {
+  console.error(err.message);
   process.exit(2);
 }
-const secrets = JSON.parse(fs.readFileSync(secretsPath, 'utf8'));
-const creds = secrets.twitterAccounts?.[account] || (secrets.twitter?.handle === account ? secrets.twitter : null);
+const creds = getTwitterCreds(secrets, account);
 if (!creds) {
   console.error(`No credentials found for account: ${account}`);
   process.exit(2);
@@ -84,7 +87,7 @@ async function request(method, url, bodyObj) {
 async function uploadMedia(filePath) {
   const data = fs.readFileSync(filePath);
   const filename = path.basename(filePath);
-  const boundary = '----openclaw' + crypto.randomBytes(8).toString('hex');
+  const boundary = '----cricdotcric' + crypto.randomBytes(8).toString('hex');
   const pre = Buffer.from(
     `--${boundary}\r\n` +
     `Content-Disposition: form-data; name="media"; filename="${filename}"\r\n` +
