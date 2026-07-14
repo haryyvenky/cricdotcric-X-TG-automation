@@ -11,6 +11,15 @@ REPO="/Users/haryyvenky/cricdotcric-X-TG-automation"
 CLAUDE="/Users/haryyvenky/.local/bin/claude"
 export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 
+# Non-interactive auth for the claude CLI. Token comes from `claude setup-token`
+# and is stored (600) at ~/.cricdotcric/claude-oauth-token — never in the repo.
+TOKEN_FILE="$HOME/.cricdotcric/claude-oauth-token"
+if [ -f "$TOKEN_FILE" ]; then
+  export CLAUDE_CODE_OAUTH_TOKEN="$(cat "$TOKEN_FILE")"
+fi
+# Make sure no inherited gateway/key overrides the token.
+unset ANTHROPIC_BASE_URL ANTHROPIC_API_KEY 2>/dev/null || true
+
 MODE="${1:-draft}"
 cd "$REPO" || exit 1
 mkdir -p "$REPO/state/logs"
