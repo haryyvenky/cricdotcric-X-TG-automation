@@ -41,6 +41,11 @@ Every draft goes through this Telegram approval loop before posting.
 - Funny and punchy — like a fan who also knows the stats
 - Stats = occasional spice, not the main dish
 
+## STRICT RULES (never violate)
+1. **Voice:** funny, eccentric, editorial — never bland or boring.
+2. **Image = live action:** always players/teams IN ACTION on the cricket field — no posed portraits, headshots, or off-field/ceremony photos.
+3. **Format-correct kit:** jersey must match the format covered — Test → whites; ODI → coloured ODI kit; T20I → T20 kit; franchise (IPL/BBL/PSL/etc.) → that franchise's jersey. Wrong-format kit = reject and re-source.
+
 ---
 
 ## PREVIEW TWEET TEMPLATE
