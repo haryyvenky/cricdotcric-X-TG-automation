@@ -1,12 +1,16 @@
 # cricdotcric-X-TG-automation
 
-Queue-driven X/Twitter automation for the `@cricdotcric` cricket account.
+Queue-driven X/Twitter automation for the `@cricdotcric` cricket account, run
+by a Claude Code subagent under a Telegram approval loop.
 
 This project packages the working core of a cricket social media agent into a
 clean, reviewable repository:
 
 - editorial rules for preview and review tweets
-- queue generation from the IPL schedule
+- a curated series watchlist (`content/coverage.json`) instead of blanket live
+  coverage
+- a Claude subagent + skill that drafts tweets, sources images via WebSearch,
+  and waits for Telegram approval before posting
 - queue-based publishing with image attachment support
 - durable posting state for idempotent runs
 - clear separation between implementation, content, docs, and runtime state
@@ -26,50 +30,71 @@ system design decisions.
 
 ## What It Does
 
-The system manages two types of publishing flows:
+Coverage is opt-in, not blanket live cricket: the agent only works on series
+listed with `active: true` in `content/coverage.json`, a curated watchlist. For
+each active series it drafts:
 
-- `IPL daily queue`
-  - match-day preview posts
-  - next-morning review posts
-- `IPL hype queue`
-  - preseason or campaign-style supporting posts
+- match-day **preview** posts
+- next-morning **review** posts
 
-Publishing is driven by JSON queues. A runner validates due items, downloads the
-selected image, posts to X, and records what was published so duplicate posting
-is avoided.
+Two Claude Code scheduled routines drive the workflow:
+
+- a daily **draft** run that finds fixtures (via Claude WebSearch — there is no
+  more schedule feed to poll), writes drafts to a queue, and sends them to
+  Telegram for approval
+- an every-~15-minute **check-and-post** run that polls Telegram for operator
+  replies and posts approved drafts to X
+
+Both routines invoke the `cricdotcric` subagent, which uses the
+`cricdotcric-post` skill for the actual editorial and posting steps. A runner
+validates due items, downloads the selected image, posts to X, and records
+what was published so duplicate posting is avoided.
 
 ## Repository Layout
 
+- `.claude/agents/cricdotcric.md`
+  - the subagent invoked by both scheduled routines
+- `.claude/skills/cricdotcric-post/SKILL.md`
+  - the skill defining the draft and check-and-post workflows
 - `scripts/`
-  - implementation layer for posting and queue processing
+  - implementation layer for posting, queue processing, and Telegram
 - `content/`
-  - production content queues and long-form editorial artifacts
+  - `coverage.json` (series watchlist), `queue.json` (draft/approval buffer),
+    and editorial artifacts
 - `docs/`
-  - editorial rules, schedule fallback, architecture, and scheduler notes
+  - editorial rules, architecture, and scheduler notes
 - `state/`
-  - local runtime state for queue posting history
+  - local runtime state for queue posting history and Telegram poll offset
 - `assets/`
   - optional local visual assets
 
 ## Core Flow
 
-1. `scripts/build-ipl-daily-queue.js`
-   - builds the IPL queue from the official schedule feed, with markdown fallback
-2. `scripts/post-queue.js`
-   - validates and posts due items from a queue
-3. `scripts/x-post.js`
+1. `.claude/agents/cricdotcric.md` + `.claude/skills/cricdotcric-post/SKILL.md`
+   - drives both the draft and check-and-post modes end to end
+2. `content/coverage.json`
+   - the watchlist of series the agent is allowed to cover
+3. `scripts/post-queue.js`
+   - validates and posts due items from `content/queue.json`
+4. `scripts/x-post.js`
    - low-level X posting client with media upload support
-4. `state/*.json`
-   - stores posting history so the runner is safe to execute repeatedly
+5. `scripts/telegram.js`
+   - sends drafts to Telegram and polls for operator approval replies
+6. `scripts/config.js` + `scripts/lib/`
+   - shared secrets loading, queue-item validation, state, date, and
+     Telegram-reply-parsing helpers
+7. `state/*.json`
+   - stores posting history and the Telegram poll offset so both runs are
+     safe to execute repeatedly
 
 ## Secrets
 
 This repository does not contain live credentials.
 
-`scripts/x-post.js` reads credentials from:
+`scripts/config.js` reads credentials from:
 
 1. `CRICDOTCRIC_SECRETS_FILE`, if set
-2. otherwise `~/.openclaw/secrets.json`
+2. otherwise `~/.cricdotcric/secrets.json`
 
 Expected structure:
 
@@ -82,49 +107,64 @@ Expected structure:
       "accessToken": "...",
       "accessTokenSecret": "..."
     }
+  },
+  "telegram": {
+    "botToken": "...",
+    "chatId": "..."
   }
 }
 ```
 
 ## Usage
 
-Verify account auth:
+Verify X account auth:
 
 ```bash
-node scripts/x-post.js --account cricdotcric --verify
+npm run verify
 ```
 
-Build the IPL queue:
+Verify Telegram connectivity:
 
 ```bash
-node scripts/build-ipl-daily-queue.js
+npm run tg:selftest
 ```
 
-Dry-run the daily queue:
+Dry-run the poster against the current queue:
 
 ```bash
-node scripts/post-queue.js ipl-daily-queue.json --dry-run
+npm run post:due:dry
 ```
 
-Post due daily IPL items:
+Post due items for real:
 
 ```bash
-node scripts/post-ipl-queue.js
+npm run post:due
+```
+
+Run the test suite:
+
+```bash
+npm test
 ```
 
 ## Scheduler Model
 
-This repo does not depend on macOS `cron`.
+This repo does not depend on macOS `cron` or any hosted webhook.
 
-In the original deployment, scheduling is handled by the OpenClaw internal cron
-subsystem, while macOS `launchd` is used only to keep the OpenClaw gateway
-alive. See `docs/scheduler.md`.
+Scheduling is handled by two Claude Code scheduled routines: a daily **draft**
+run and an every-~15-minute **check-and-post** run, both invoking the
+`cricdotcric` subagent. Operator approval happens over Telegram using a
+poll-based loop (`scripts/telegram.js poll`), so no inbound webhook or public
+endpoint is required. See `docs/scheduler.md`.
 
 ## Best Files To Review
 
+- `.claude/agents/cricdotcric.md`
+- `.claude/skills/cricdotcric-post/SKILL.md`
 - `docs/architecture.md`
 - `docs/editorial-template.md`
 - `docs/scheduler.md`
-- `scripts/x-post.js`
 - `scripts/post-queue.js`
-- `content/ipl-daily-queue.json`
+- `scripts/telegram.js`
+- `scripts/x-post.js`
+- `content/coverage.json`
