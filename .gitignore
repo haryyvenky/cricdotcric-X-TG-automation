@@ -3,6 +3,7 @@ node_modules/
 
 # Local runtime state
 state/*.json
+state/logs/
 !state/.gitkeep
 
 # Scratch files
