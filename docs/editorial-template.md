@@ -2,9 +2,9 @@
 
 ## Account
 - Twitter/X: @cricdotcric (https://x.com/cricdotcric)
-- Posting modes:
-  - queued IPL posts can be published directly by the local posting scripts
-  - optional approval-mode drafts can still go through Telegram before posting
+- Posting flow:
+  - the Claude agent drafts queued posts for watchlisted series and sends them to Telegram for approval
+  - only operator-approved drafts are published by the local posting scripts
 
 ## Workflow
 - **Preview tweet** → Drafted + image sourced for the match day queue or approval flow
@@ -14,7 +14,7 @@
 - **No hashtags**
 
 ## Approval Workflow (MANDATORY — no tweet posts without approval)
-This section applies only when using an external approval loop.
+Every draft goes through this Telegram approval loop before posting.
 1. Draft sent to Telegram with image as caption in this format:
    ```
    📋 DRAFT [PREVIEW/REVIEW] — [Match]
@@ -31,8 +31,8 @@ This section applies only when using an external approval loop.
 6. Draft state should be stored outside the committed repository while awaiting approval
 
 ## Queue Workflow
-- Daily IPL queue items live in `content/ipl-daily-queue.json`
-- Hype queue items live in `content/ipl-hype-queue.json`
+- The series watchlist (what to cover) lives in `content/coverage.json`
+- Draft items are appended to `content/queue.json` with `status: "pending"`
 - Posting state is recorded in repo-local `state/*.json`
 - Queue items should be complete and production-ready before they are allowed to post
 
@@ -115,7 +115,7 @@ Mumbai won by 6 wickets with 5 balls left. Player of the Match: Shardul Thakur. 
 ---
 
 ## Image Sourcing Rules (MANDATORY)
-- **Always use Brave Search API** to find images — be comprehensive, run multiple searches
+- **Use WebSearch/WebFetch** to find images — be comprehensive, run multiple searches
 - ICC Cloudinary generic images = BAD. Low-effort thumbnails, interview stills, cropped TV grabs, and generic banners = BAD.
 - **Priority sources:** Getty Images, AP Photo, PTI, AFP, Sky Sports match galleries, ESPNCricinfo photo galleries, Outlook India photo galleries, BBC Sport, Sportstar (The Hindu), official team/IPL photography
 - **Search strategy:** Run 2-3 targeted searches per image — vary keywords:
