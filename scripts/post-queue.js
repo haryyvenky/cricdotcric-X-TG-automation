@@ -3,6 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const os = require('os');
+const { getItemId, validateItem } = require('./lib/queue-item');
+const { loadState, saveState, itemAlreadyPosted } = require('./lib/state');
+const { currentDateInZone } = require('./lib/dates');
 const repoRoot = path.resolve(__dirname, '..');
 const contentDir = path.join(repoRoot, 'content');
 const stateDir = path.join(repoRoot, 'state');
@@ -35,62 +38,6 @@ function resolveQueuePath(name) {
   return path.join(contentDir, name);
 }
 
-function loadState(filePath) {
-  if (!fs.existsSync(filePath)) return { posted: {}, postedById: {} };
-  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  return {
-    posted: parsed.posted || {},
-    postedById: parsed.postedById || {},
-  };
-}
-
-function saveState(filePath, state) {
-  fs.writeFileSync(filePath, JSON.stringify(state, null, 2) + '\n');
-}
-
-function getItemId(item) {
-  return item.id || item.date;
-}
-
-function itemAlreadyPosted(item, state) {
-  const id = getItemId(item);
-  return Boolean(state.postedById[id] || state.posted[item.date]);
-}
-
-function validateItem(item, queueBaseName) {
-  if (!item || typeof item !== 'object') {
-    throw new Error(`Invalid queue item in ${queueBaseName}: expected object`);
-  }
-  if (!item.account) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: missing account`);
-  }
-  if (!item.tweet || typeof item.tweet !== 'string' || !item.tweet.trim()) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: missing tweet text`);
-  }
-  if (item.tweet.length > 280) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: tweet exceeds 280 chars`);
-  }
-  if (!item.date || !/^\d{4}-\d{2}-\d{2}$/.test(item.date)) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: invalid date`);
-  }
-  if (item.scheduledFor && Number.isNaN(new Date(item.scheduledFor).getTime())) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: invalid scheduledFor`);
-  }
-  if (!item.imageUrl || typeof item.imageUrl !== 'string' || !item.imageUrl.startsWith('http')) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: missing production imageUrl`);
-  }
-  const placeholderPatterns = [
-    /^IPL today:/,
-    /^Last night gave us /,
-    /^Yesterday delivered /,
-    /New day, new noise/i,
-    /IPL business as usual/i,
-  ];
-  if (placeholderPatterns.some((re) => re.test(item.tweet))) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: placeholder copy blocked`);
-  }
-}
-
 function buildRecord(item, parsed, extra = {}) {
   const tweetId = parsed.json?.data?.id;
   const link = tweetId ? `https://x.com/${item.account}/status/${tweetId}` : undefined;
@@ -112,7 +59,7 @@ function buildRecord(item, parsed, extra = {}) {
 async function maybeDownloadImage(item, tmpDir, queueBaseName) {
   if (!item.imageUrl) return undefined;
   const imagePath = path.join(tmpDir, `${queueBaseName}-${getItemId(item)}.jpg`);
-  const r = await fetch(item.imageUrl, { headers: { 'User-Agent': 'Mozilla/5.0 OpenClaw' } });
+  const r = await fetch(item.imageUrl, { headers: { 'User-Agent': 'Mozilla/5.0 cricdotcric-agent' } });
   if (!r.ok) throw new Error(`Image download failed: ${r.status}`);
   const buf = Buffer.from(await r.arrayBuffer());
   fs.writeFileSync(imagePath, buf);
@@ -136,10 +83,7 @@ async function maybeDownloadImage(item, tmpDir, queueBaseName) {
   const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
   const state = loadState(statePath);
 
-  const currentDateSGT = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Asia/Singapore',
-    year: 'numeric', month: '2-digit', day: '2-digit'
-  }).format(now);
+  const currentDateSGT = currentDateInZone(now, 'Asia/Singapore');
 
   let items;
   if (targetDate) {
