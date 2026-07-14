@@ -1,3 +1,15 @@
 {
-  "series": []
+  "series": [
+    {
+      "id": "eng-v-ind-odi-2026",
+      "name": "England vs India ODI Series 2026",
+      "teams": ["ENG", "IND"],
+      "format": "ODI",
+      "active": true,
+      "startDate": "2026-07-14",
+      "endDate": "2026-07-19",
+      "notes": "ODI leg of India's tour of England 2026. Fixtures: 1st ODI 14 Jul (Edgbaston, Birmingham), 2nd ODI 16 Jul (Sophia Gardens, Cardiff), 3rd ODI 19 Jul (Lord's, London). The 5-match T20I leg (1-11 Jul) is already complete. India ODI captain: Shubman Gill; England captain per current squad.",
+      "source": "https://www.espncricinfo.com/series/india-in-england-2026-1496488/match-schedule-fixtures-and-results"
+    }
+  ]
 }
