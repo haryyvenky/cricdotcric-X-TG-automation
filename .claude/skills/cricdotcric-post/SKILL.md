@@ -33,7 +33,9 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
 
 ## CHECK-AND-POST mode
 1. Read the saved Telegram offset from `state/telegram-offset.json` (default 0).
-2. Poll: `node scripts/telegram.js poll --offset <offset>`. Save `newOffset` back.
+2. Poll: `node scripts/telegram.js poll --offset <offset>`. You own persistence:
+   write the returned `newOffset` back to `state/telegram-offset.json` so replies
+   are never re-processed.
 3. For each reply, match `replyToMessageId` (or nearest pending item) to a
    `pending` queue item and act on `decision`:
    - `approved` → post it: `node scripts/post-queue.js queue.json --now <ISO>`
