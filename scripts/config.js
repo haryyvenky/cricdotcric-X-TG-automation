@@ -25,4 +25,10 @@ function getTelegramConfig(secrets) {
   return tg;
 }
 
-module.exports = { secretsPath, loadSecrets, getTwitterCreds, getTelegramConfig };
+function getBraveKey(secrets) {
+  const k = (secrets.brave && secrets.brave.apiKey) || secrets.braveApiKey;
+  if (!k) throw new Error('Brave API key missing (secrets.brave.apiKey)');
+  return k;
+}
+
+module.exports = { secretsPath, loadSecrets, getTwitterCreds, getTelegramConfig, getBraveKey };
