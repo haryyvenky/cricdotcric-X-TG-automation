@@ -22,9 +22,12 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
 2. Skip anything whose id is already in `content/queue.json` or `state/queue-state.json`.
 3. For each new fixture, draft ONE tweet (≤280 chars, no hashtags) following the
    preview/review template in `docs/editorial-template.md`.
-4. Source ONE specific, relevant, high-res image via WebSearch/WebFetch. Validate
-   the URL loads. If no acceptable image is found, DO NOT queue it — send a
-   Telegram message flagging that the fixture needs a manual image, and skip.
+4. Source ONE image with `node scripts/find-image.js "<query>"` (Brave image
+   search; e.g. query `"England vs India ODI 2026 <player> batting"`). It returns
+   candidates that already download cleanly. **VIEW the top candidates (Read the
+   image) and pick one that satisfies ALL strict rules** (live action, format-correct
+   kit, same two teams, within 3 years). If none qualify, DO NOT queue it — send a
+   Telegram message flagging that the item needs a manual image, and skip.
 5. Append the item to `content/queue.json` with `status: "pending"` and a unique
    `id` (e.g. `<series-id>-m<N>-preview`).
 6. Send the draft to Telegram:
