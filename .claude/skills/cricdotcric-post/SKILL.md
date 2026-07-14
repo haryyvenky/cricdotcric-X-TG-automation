@@ -30,6 +30,13 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
 6. Send the draft to Telegram:
    `node scripts/telegram.js send --text-file <tmpfile> --image <imageUrl>`
    Record the returned `messageId` on the queue item as `telegramMessageId`.
+7. **Guarantee one post per day (evergreen fallback).** If, after steps 1–6, no
+   fixture-based draft was produced for today (no watched match is upcoming or just
+   finished), draft ONE evergreen cricket post instead — a stat, record, milestone,
+   trivia, or nostalgia angle (prefer something tied to a watched team/series when
+   possible). Source + validate an image the same way, queue it with a
+   `type: "evergreen"` and a unique `id` (e.g. `evergreen-<YYYY-MM-DD>`), and send it
+   to Telegram for approval. The account should never go a day without a post.
 
 ## CHECK-AND-POST mode
 1. Read the saved Telegram offset from `state/telegram-offset.json` (default 0).
@@ -53,16 +60,4 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
 - One tweet per fixture side (one preview, one review). No threads.
 - Image must match the tweet subject. Generic/low-res images are rejected.
 - If X or Telegram calls fail, leave the item `pending` and report the error.
-
-## Verify
-- Confirm the file exists and its frontmatter is intact: `head -4 .claude/skills/cricdotcric-post/SKILL.md` should show the `---` / `name:` / `description:` / `---` lines.
-- `node --test` should still pass (21 tests) — unaffected by this doc.
-
-## Commit
-```bash
-git add .claude/skills/cricdotcric-post/SKILL.md
-git commit -m "feat: add cricdotcric-post skill (editorial brain)"
-```
-
-## Report Format
-Report: Status (DONE / DONE_WITH_CONCERNS / BLOCKED / NEEDS_CONTEXT), the `head -4` output confirming frontmatter, files changed, final commit SHA. Do not create anything beyond this one file.
+- At least one post per day: if no fixture is due, use the evergreen fallback (DRAFT step 7).
