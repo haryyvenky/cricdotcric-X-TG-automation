@@ -217,3 +217,75 @@ Claude-native design.
 
 1. The actual **series list** to seed `coverage.json`.
 2. **Credentials**: X API keys + Telegram bot token + operator chat ID.
+
+---
+
+# Implementation Addendum — as built (2026-07-15)
+
+The system is live and posting to @cricdotcric. What actually shipped differs from
+the original design in a few important ways; this section is the source of truth.
+
+## What changed vs. the original design
+
+- **Runtime is NOT a headless Claude agent.** Headless `claude -p` will not
+  authenticate on the operator's Mac — a persistent `401 Invalid authentication
+  credentials`, even with a valid Claude Pro/Max `claude setup-token` (fresh token,
+  correct account, clean shell all verified). So the "Claude does everything on a
+  schedule" model is not achievable here yet. See "Headless auth blocker" below.
+- **Semi-automatic split instead:**
+  - **Drafting (the only AI step)** — done in an interactive Claude session
+    (operator asks; Claude drafts copy + sources/verifies an image + sends the draft
+    to Telegram). Uses the working interactive subscription; no extra cost.
+  - **Posting — fully automated, pure Node, no AI.** A real-time Telegram bot daemon
+    posts approved drafts within ~1s and confirms with the live link.
+- **Scheduling is local macOS launchd, not cloud** (operator declined cloud to avoid
+  cost; cloud would also need the repo + secrets hosted off-machine).
+- **Images via the Brave Search Image API** (`scripts/find-image.js`), not
+  WebSearch/WebFetch — needed to meet the strict image rules with real match photos.
+  The drafter VIEWS candidates and verifies them against the rules before use.
+
+## Components (as built)
+
+- `scripts/config.js` — secrets loader: X creds, Telegram, **Brave API key**.
+- `scripts/lib/{queue-item,state,dates,telegram-parse,posting}.js` — pure helpers
+  (`posting.js` holds the shared approve→post logic).
+- `scripts/x-post.js` — X client. `scripts/post-queue.js` — batch queue runner.
+- `scripts/telegram.js` — Telegram CLI (send/poll/message/selftest).
+- `scripts/find-image.js` — Brave image search + download validation.
+- `scripts/telegram-bot.js` — **real-time long-polling daemon** (approve→post,
+  reject/corrections → instant ack). Run via launchd `KeepAlive`.
+- `scripts/check-and-post.js` — one-shot poller (manual/backup; don't run alongside
+  the daemon — Telegram allows one long-poller).
+- `scripts/draft-reminder.js` — 2 PM SGT Telegram nudge to draft.
+- `scripts/agent-run.sh` — claude-headless runner, retained for if/when headless
+  auth is fixed (would re-enable fully-unattended drafting).
+- `.claude/skills/cricdotcric-post/SKILL.md`, `.claude/agents/cricdotcric.md`.
+- `content/coverage.json` (watchlist: England v India ODI series 2026),
+  `content/queue.json` (draft buffer).
+
+## launchd jobs (installed + loaded)
+
+- `com.cricdotcric.bot` — always-on daemon (`KeepAlive`, `RunAtLoad`).
+- `com.cricdotcric.draft` — 14:00 local (2 PM SGT) draft reminder.
+- (`com.cricdotcric.checkpost` was retired — superseded by the daemon.)
+
+## Strict content rules (enforced; also in the skill, editorial-template, memory)
+
+1. Voice: funny, eccentric, editorial — never bland.
+2. Image = live action on the field (no posed/portrait/off-field shots).
+3. Format-correct kit (Test whites / ODI kit / T20 kit / franchise jersey).
+4. Same two teams, ongoing match or within the last 3 years (never a third team).
+
+## Ad-hoc posting
+
+Operator asks in Claude → draft + Brave image (verified) → Telegram → approve → the
+daemon posts. A phone-only "instruct the bot to draft" flow is blocked by the same
+headless-auth wall (bot is pure Node; drafting needs an AI it can invoke).
+
+## Headless auth blocker (open)
+
+`claude -p ... --dangerously-skip-permissions` → `401 Invalid authentication
+credentials`. Ruled out: token file format, env pollution (`ANTHROPIC_BASE_URL`/key),
+wrong account, stale token. Root cause not yet identified. Fixing it (or using a
+metered `ANTHROPIC_API_KEY`) would unlock fully-unattended drafting and a bot
+`/draft <topic>` command.

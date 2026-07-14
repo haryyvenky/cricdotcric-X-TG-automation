@@ -13,7 +13,9 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
 - Draft buffer: `content/queue.json` (items carry `status`).
 - Editorial rules (tone, templates, image standards): `docs/editorial-template.md` — read it before drafting.
 - Posting tools: `scripts/post-queue.js`, `scripts/x-post.js`, `scripts/telegram.js`.
-- Never post without operator approval. Never double-post (check `state/`).
+- Image sourcing: `scripts/find-image.js` (Brave). Never post without operator approval. Never double-post (check `state/`).
+- A pure-Node daemon (`scripts/telegram-bot.js`) handles approvals in real time and
+  posts approved drafts — so in DRAFT mode you only need to draft + send to Telegram.
 
 ## DRAFT mode
 1. Read `content/coverage.json`. For each `active` series, WebSearch fixtures:
