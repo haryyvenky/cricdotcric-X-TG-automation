@@ -45,6 +45,7 @@ Every draft goes through this Telegram approval loop before posting.
 1. **Voice:** funny, eccentric, editorial — never bland or boring.
 2. **Image = live action:** always players/teams IN ACTION on the cricket field — no posed portraits, headshots, or off-field/ceremony photos.
 3. **Format-correct kit:** jersey must match the format covered — Test → whites; ODI → coloured ODI kit; T20I → T20 kit; franchise (IPL/BBL/PSL/etc.) → that franchise's jersey. Wrong-format kit = reject and re-source.
+4. **Right teams, recent:** image must be from the ongoing match, or a prior match between the SAME two teams, within the last 3 years. Never feature a third team (e.g. India-v-Pakistan shot for an England-v-India post).
 
 ---
 
