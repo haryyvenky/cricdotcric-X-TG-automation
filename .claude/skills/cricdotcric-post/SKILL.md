@@ -64,6 +64,9 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
    Test → whites; ODI → coloured ODI kit; T20I → T20 kit; franchise (IPL/BBL/PSL/etc.)
    → that franchise's jersey. Wrong-format kit (e.g. Test whites on an ODI post) =
    reject and re-source the image.
+4. **Right teams, recent:** the image must be from the ONGOING match, or a previous
+   match between the SAME two teams, within the last 3 years. Never use a photo that
+   features a third team (e.g. an India-v-Pakistan shot for an England-v-India post).
 
 ## Guardrails
 - One tweet per fixture side (one preview, one review). No threads.
