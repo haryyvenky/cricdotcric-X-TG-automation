@@ -147,7 +147,7 @@ async function maybeDownloadImage(item, tmpDir, queueBaseName) {
     ];
     if (imagePath) postArgs.push('--media-file', imagePath);
 
-    const output = execFileSync('node', postArgs, { encoding: 'utf8' });
+    const output = execFileSync(process.execPath, postArgs, { encoding: 'utf8' });
     const parsed = JSON.parse(output);
     if (!parsed.ok) throw new Error(`Tweet post failed: ${output}`);
 
