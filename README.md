@@ -1,170 +1,99 @@
 # cricdotcric-X-TG-automation
 
-Queue-driven X/Twitter automation for the `@cricdotcric` cricket account, run
-by a Claude Code subagent under a Telegram approval loop.
+Automated X/Twitter posting for the `@cricdotcric` cricket account: **headless
+Claude drafts the tweets, you approve them in Telegram, and they post to X** —
+running locally on a Mac via `launchd`, on a Claude Pro subscription (no API key).
 
-This project packages the working core of a cricket social media agent into a
-clean, reviewable repository:
+- a curated series watchlist (`content/coverage.json`) — opt-in, not blanket
+  live cricket
+- a `cricdotcric-post` skill + subagent that encodes the editorial rules
+- headless Claude (Sonnet) that finds fixtures, writes copy, and sources a
+  rule-compliant match photo via the Brave image API
+- a real-time Telegram bot for one-tap approval and phone-driven ad-hoc posts
+- durable posting state for idempotent, no-double-post runs
 
-- editorial rules for preview and review tweets
-- a curated series watchlist (`content/coverage.json`) instead of blanket live
-  coverage
-- a Claude subagent + skill that drafts tweets, sources images via WebSearch,
-  and waits for Telegram approval before posting
-- queue-based publishing with image attachment support
-- durable posting state for idempotent runs
-- clear separation between implementation, content, docs, and runtime state
+## How it runs (two modes)
 
-## What This Demonstrates
+**1. Daily automatic (2 PM SGT).** `launchd` job `com.cricdotcric.draft` runs
+`scripts/agent-run.sh draft` → headless `claude -p` invokes the `cricdotcric-post`
+skill: finds a due fixture for an `active` series (WebSearch), drafts a preview or
+review tweet, sources + verifies an image (`scripts/find-image.js`, Brave), queues
+it `pending`, and sends the draft to Telegram.
 
-This repository is useful as an engineering sample because it combines:
+**2. Ad-hoc from your phone.** Message the bot `/draft <topic>` → the always-on
+daemon (`com.cricdotcric.bot`) fires the same headless drafting for that topic and
+sends the draft to Telegram.
 
-- workflow automation
-- external API integration
-- content validation and operational safeguards
-- scheduler-aware design
-- separation of code, config, content, and runtime state
-
-It is intentionally small enough to review quickly while still showing real
-system design decisions.
-
-## What It Does
-
-Coverage is opt-in, not blanket live cricket: the agent only works on series
-listed with `active: true` in `content/coverage.json`, a curated watchlist. For
-each active series it drafts:
-
-- match-day **preview** posts
-- next-morning **review** posts
-
-Two Claude Code scheduled routines drive the workflow:
-
-- a daily **draft** run that finds fixtures (via Claude WebSearch — there is no
-  more schedule feed to poll), writes drafts to a queue, and sends them to
-  Telegram for approval
-- an every-~15-minute **check-and-post** run that polls Telegram for operator
-  replies and posts approved drafts to X
-
-Both routines invoke the `cricdotcric` subagent, which uses the
-`cricdotcric-post` skill for the actual editorial and posting steps. A runner
-validates due items, downloads the selected image, posts to X, and records
-what was published so duplicate posting is avoided.
+Either way, you reply **✅ Approved** in Telegram and the bot daemon posts to X
+within ~1s and confirms with the live link. Nothing posts without your approval.
 
 ## Repository Layout
 
-- `.claude/agents/cricdotcric.md`
-  - the subagent invoked by both scheduled routines
-- `.claude/skills/cricdotcric-post/SKILL.md`
-  - the skill defining the draft and check-and-post workflows
+- `.claude/skills/cricdotcric-post/SKILL.md` — the editorial brain (workflow + strict rules)
+- `.claude/agents/cricdotcric.md` — subagent that runs the skill
 - `scripts/`
-  - implementation layer for posting, queue processing, and Telegram
-- `content/`
-  - `coverage.json` (series watchlist), `queue.json` (draft/approval buffer),
-    and editorial artifacts
-- `docs/`
-  - editorial rules, architecture, and scheduler notes
-- `state/`
-  - local runtime state for queue posting history and Telegram poll offset
-- `assets/`
-  - optional local visual assets
-
-## Core Flow
-
-1. `.claude/agents/cricdotcric.md` + `.claude/skills/cricdotcric-post/SKILL.md`
-   - drives both the draft and check-and-post modes end to end
-2. `content/coverage.json`
-   - the watchlist of series the agent is allowed to cover
-3. `scripts/post-queue.js`
-   - validates and posts due items from `content/queue.json`
-4. `scripts/x-post.js`
-   - low-level X posting client with media upload support
-5. `scripts/telegram.js`
-   - sends drafts to Telegram and polls for operator approval replies
-6. `scripts/config.js` + `scripts/lib/`
-   - shared secrets loading, queue-item validation, state, date, and
-     Telegram-reply-parsing helpers
-7. `state/*.json`
-   - stores posting history and the Telegram poll offset so both runs are
-     safe to execute repeatedly
+  - `agent-run.sh` — headless-Claude runner (modes: `draft`, `adhoc "<topic>"`, `check-and-post`)
+  - `telegram-bot.js` — always-on daemon: real-time approvals + `/draft`
+  - `find-image.js` — Brave image search + download validation
+  - `x-post.js` — X API client (OAuth1, media upload)
+  - `post-queue.js` / `check-and-post.js` — batch + one-shot posters (manual/backup)
+  - `telegram.js` — Telegram CLI (send / poll / message / selftest)
+  - `config.js` + `lib/` — secrets, validation, state, dates, telegram-parse, shared posting
+- `content/` — `coverage.json` (watchlist), `queue.json` (draft/approval buffer)
+- `deploy/launchd/` — the launchd plists + install/ops notes
+- `docs/` — editorial rules, architecture, scheduler, **RUNBOOK (operations/handoff)**
+- `state/` — posting history + Telegram offset + logs (gitignored)
 
 ## Secrets
 
-This repository does not contain live credentials.
-
-`scripts/config.js` reads credentials from:
-
-1. `CRICDOTCRIC_SECRETS_FILE`, if set
-2. otherwise `~/.cricdotcric/secrets.json`
-
-Expected structure:
+Not in the repo. `scripts/config.js` reads from `CRICDOTCRIC_SECRETS_FILE`, else
+`~/.cricdotcric/secrets.json`:
 
 ```json
 {
   "twitterAccounts": {
-    "cricdotcric": {
-      "apiKey": "...",
-      "apiSecret": "...",
-      "accessToken": "...",
-      "accessTokenSecret": "..."
-    }
+    "cricdotcric": { "apiKey": "...", "apiSecret": "...", "accessToken": "...", "accessTokenSecret": "..." }
   },
-  "telegram": {
-    "botToken": "...",
-    "chatId": "..."
-  }
+  "telegram": { "botToken": "...", "chatId": "..." },
+  "brave": { "apiKey": "..." }
 }
 ```
 
-## Usage
+Headless Claude auth uses a long-lived token from `claude setup-token`, stored at
+`~/.cricdotcric/claude-oauth-token` and loaded by `scripts/agent-run.sh`.
 
-Verify X account auth:
-
-```bash
-npm run verify
-```
-
-Verify Telegram connectivity:
+## Usage (manual commands)
 
 ```bash
-npm run tg:selftest
+npm run verify        # verify X auth (@cricdotcric)
+npm run tg:selftest   # verify Telegram bot → your chat
+npm run post:due:dry  # dry-run the poster against the queue
+npm test              # node --test
 ```
 
-Dry-run the poster against the current queue:
-
+Trigger a draft immediately (same as the 2 PM job):
 ```bash
-npm run post:due:dry
+launchctl kickstart -k "gui/$(id -u)/com.cricdotcric.draft"
 ```
 
-Post due items for real:
+## Scheduling
 
-```bash
-npm run post:due
-```
+macOS `launchd`, not cron or a webhook. `com.cricdotcric.draft` fires the daily
+2 PM SGT draft (catches up on wake if the Mac was off); `com.cricdotcric.bot` is an
+always-on (`KeepAlive`) long-polling daemon that handles approvals in real time.
+Install/ops: `deploy/launchd/README.md`. Day-to-day operations + troubleshooting:
+`docs/RUNBOOK.md`.
 
-Run the test suite:
+## Notes
 
-```bash
-npm test
-```
-
-## Scheduler Model
-
-This repo does not depend on macOS `cron` or any hosted webhook.
-
-Scheduling is handled by two Claude Code scheduled routines: a daily **draft**
-run and an every-~15-minute **check-and-post** run, both invoking the
-`cricdotcric` subagent. Operator approval happens over Telegram using a
-poll-based loop (`scripts/telegram.js poll`), so no inbound webhook or public
-endpoint is required. See `docs/scheduler.md`.
+- `@cricdotcric` is X Premium — tweets may exceed 280 chars (validator caps at 25,000).
+- Drafting model is pinned to Sonnet in `scripts/agent-run.sh` (`MODEL="sonnet"`).
+- Runs on the Claude Pro subscription; heavy days can hit a usage/session limit
+  (not an error — the job catches up on the next wake).
 
 ## Best Files To Review
 
-- `.claude/agents/cricdotcric.md`
-- `.claude/skills/cricdotcric-post/SKILL.md`
-- `docs/architecture.md`
-- `docs/editorial-template.md`
-- `docs/scheduler.md`
-- `scripts/post-queue.js`
-- `scripts/telegram.js`
-- `scripts/x-post.js`
-- `content/coverage.json`
+- `docs/RUNBOOK.md`, `docs/architecture.md`, `docs/editorial-template.md`
+- `.claude/skills/cricdotcric-post/SKILL.md`, `.claude/agents/cricdotcric.md`
+- `scripts/agent-run.sh`, `scripts/telegram-bot.js`, `scripts/find-image.js`
+- `deploy/launchd/README.md`, `content/coverage.json`

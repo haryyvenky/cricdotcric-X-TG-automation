@@ -2,52 +2,49 @@
 
 ## Scheduling Model
 
-Scheduling is handled by two Claude Code scheduled routines, not by macOS
-`cron` or any hosted webhook service. Both routines invoke the same
-`cricdotcric` subagent (`.claude/agents/cricdotcric.md`), passing the mode as
-part of the prompt:
+Scheduling is macOS **`launchd`** — not `cron`, not a hosted webhook, not Claude
+Code's built-in routines (those were unavailable in this environment). Two jobs,
+both defined in `deploy/launchd/`:
 
-- **draft** — runs once a day. Finds fixtures for `active` series in
-  `content/coverage.json` via WebSearch, drafts preview/review tweets, sources
-  images, appends them to `content/queue.json`, and sends each draft to the
-  operator over Telegram for approval.
-- **check-and-post** — runs roughly every 15 minutes. Polls Telegram for
-  operator replies (approve / request corrections / reject) using the offset
-  saved in `state/telegram-offset.json`, and posts any newly approved item via
-  `scripts/post-queue.js`.
+- **`com.cricdotcric.draft`** — fires daily at **14:00 local (2 PM SGT)**. Runs
+  `scripts/agent-run.sh draft` → headless Claude drafts a preview/review (or an
+  evergreen post) for an `active` series and sends it to Telegram. Uses
+  `StartCalendarInterval`, so a missed fire (Mac asleep/off at 2 PM) runs at the
+  next wake, and the dedupe state prevents double-drafting.
 
-Both routines execute the same `cricdotcric-post` skill
-(`.claude/skills/cricdotcric-post/SKILL.md`), just in different modes.
+- **`com.cricdotcric.bot`** — an **always-on daemon** (`RunAtLoad` + `KeepAlive`),
+  `scripts/telegram-bot.js`. It long-polls Telegram continuously and reacts in real
+  time (~1s): posts on `✅ Approved`, acknowledges rejections/corrections, and
+  handles `/draft <topic>` by spawning `agent-run.sh adhoc`. `KeepAlive` restarts
+  it after crashes/logout.
+
+There is no separate "check-and-post" schedule anymore — the daemon replaces it,
+so approvals are instant rather than polled on an interval.
 
 ## Approval Loop, Not a Webhook
 
-Because operator approval is driven by `scripts/telegram.js poll` (Telegram's
-`getUpdates` long/short polling), this system needs no hosted webhook, no
-public endpoint, and no always-on server process. The check-and-post routine
-simply needs to run periodically on a machine with network access and the
-Telegram bot token — it can run Mac-local. This keeps the operational surface
-small:
+Approval runs over Telegram `getUpdates` long-polling inside the daemon, so the
+system needs no public endpoint and no inbound server. Approval state lives in
+`content/queue.json` and `state/telegram-offset.json` (plain files); Telegram
+retains updates until acknowledged by offset, so nothing is lost across restarts.
 
-- there is nothing listening for inbound requests
-- approval state lives in `content/queue.json` and `state/telegram-offset.json`,
-  both plain files
-- a missed or delayed check-and-post run just means approval is picked up on
-  the next poll, with no lost messages (Telegram retains updates until they
-  are acknowledged by offset)
+## Prerequisites
 
-## Why This Matters
+- **X Premium** account (`@cricdotcric`) — allows long posts.
+- **Secrets** at `~/.cricdotcric/secrets.json` (X + Telegram + Brave key).
+- **Headless Claude auth** — a long-lived token from `claude setup-token` at
+  `~/.cricdotcric/claude-oauth-token` (see `docs/RUNBOOK.md` for the setup and the
+  keychain gotcha that can cause a 401).
+- The Mac must be awake/online at 2 PM (or it catches up on wake).
 
-This model is operationally cleaner than a bespoke server:
+## Install / manage
 
-- the two routines are the entire schedule — no extra process supervision
-- runtime state is centralized under `state/`
-- there is no webhook infrastructure to secure or keep alive
+See `deploy/launchd/README.md` for `cp` + `launchctl load`, and `docs/RUNBOOK.md`
+for day-to-day operations (trigger a draft now, restart the daemon, change the
+model, handle a usage limit).
 
-## Portable Use
+## Portability
 
-The same two-routine model — a daily draft pass and a frequent
-check-and-post pass, both invoking the `cricdotcric` subagent — can run
-anywhere Claude Code scheduled routines can run, not just on a single Mac.
-The scripts themselves are plain Node and do not depend on macOS-specific
-behavior; only the scheduling of the two routines needs to move if you
-relocate the deployment.
+The scripts are plain Node + a `bash` runner; only the two launchd plists are
+macOS-specific. To relocate, reproduce the two jobs (a daily draft trigger + an
+always-on bot process) on the target host.
