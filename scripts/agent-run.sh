@@ -9,6 +9,8 @@ set -uo pipefail
 
 REPO="/Users/haryyvenky/cricdotcric-X-TG-automation"
 CLAUDE="/Users/haryyvenky/.local/bin/claude"
+# Drafting model. "sonnet" is light on Pro usage limits; switch to "opus" for wittier copy.
+MODEL="sonnet"
 export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 
 # Non-interactive auth for the claude CLI. Token comes from `claude setup-token`
@@ -36,6 +38,6 @@ fi
 
 {
   echo "=== $(date '+%Y-%m-%d %H:%M:%S %Z') : ${MODE} start ==="
-  "$CLAUDE" -p "$PROMPT" --dangerously-skip-permissions
+  "$CLAUDE" -p "$PROMPT" --model "$MODEL" --dangerously-skip-permissions
   echo "=== $(date '+%Y-%m-%d %H:%M:%S %Z') : ${MODE} end (exit $?) ==="
 } >> "$LOG" 2>&1
