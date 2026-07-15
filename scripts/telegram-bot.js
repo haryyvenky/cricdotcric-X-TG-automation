@@ -15,7 +15,22 @@ const P = require('./lib/posting');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function handle(cfg, msg) {
-  const { decision, notes, reason } = parseApproval(msg.text);
+  const text = (msg.text || '').trim();
+
+  // Ad-hoc drafting: "/draft <topic>" fires headless Claude to draft + image,
+  // which sends the result back to Telegram for approval.
+  if (/^\/draft\b/i.test(text)) {
+    const topic = text.replace(/^\/draft(?:@\w+)?\s*/i, '').trim();
+    if (!topic) { await P.sendMessage(cfg, 'Usage: /draft <what to post about>'); return; }
+    await P.sendMessage(cfg, `✍️ Drafting: ${topic}\n(writing copy + sourcing a rule-compliant image — a minute or two; I'll send it here for approval.)`);
+    const { spawn } = require('child_process');
+    const path = require('path');
+    const child = spawn('/bin/bash', [path.join(__dirname, 'agent-run.sh'), 'adhoc', topic], { detached: true, stdio: 'ignore' });
+    child.unref();
+    return;
+  }
+
+  const { decision, notes, reason } = parseApproval(text);
   if (decision === 'unknown') return; // ignore chatter, don't spam replies
 
   const queue = P.loadQueue();
