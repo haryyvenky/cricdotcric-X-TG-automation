@@ -69,7 +69,7 @@ async function postApproved(cfg, item, state) {
   const imagePath = await downloadImage(item);
   const textPath = path.join(tmpDir, `${getItemId(item)}.txt`);
   fs.writeFileSync(textPath, item.tweet + '\n');
-  const out = execFileSync('node', [
+  const out = execFileSync(process.execPath, [
     path.join(repoRoot, 'scripts', 'x-post.js'),
     '--account', item.account,
     '--text-file', textPath,
