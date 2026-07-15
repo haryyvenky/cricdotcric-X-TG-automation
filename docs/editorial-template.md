@@ -9,7 +9,7 @@
 ## Workflow
 - **Preview tweet** → Drafted + image sourced for the match day queue or approval flow
 - **Review tweet** → Drafted + image sourced for the next-morning queue or approval flow
-- **Format:** Single tweet only (no threads), max 280 chars
+- **Format:** Single tweet only (no threads). @cricdotcric is X Premium — up to 25,000 chars allowed, so >280 is fine when detail earns it (e.g. a rich review); keep it punchy otherwise
 - **Images:** Source fresh per tweet — Getty, AP Photo, PTI, AFP, Sky Sports, ESPNCricinfo galleries
 - **No hashtags**
 

@@ -16,8 +16,9 @@ test('validateItem accepts a well-formed item', () => {
   assert.doesNotThrow(() => validateItem(valid, 'queue'));
 });
 
-test('validateItem rejects tweet over 280 chars', () => {
-  assert.throws(() => validateItem({ ...valid, tweet: 'x'.repeat(281) }, 'queue'), /280/);
+test('validateItem allows long (Premium) tweets but rejects absurdly long', () => {
+  assert.doesNotThrow(() => validateItem({ ...valid, tweet: 'x'.repeat(1000) }, 'queue'));
+  assert.throws(() => validateItem({ ...valid, tweet: 'x'.repeat(25001) }, 'queue'), /25000/);
 });
 
 test('validateItem rejects missing image url', () => {
