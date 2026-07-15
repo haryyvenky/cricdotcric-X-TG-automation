@@ -22,8 +22,10 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
    - upcoming matches in the next ~24h → `preview`
    - matches that finished in the last ~18h → `review`
 2. Skip anything whose id is already in `content/queue.json` or `state/queue-state.json`.
-3. For each new fixture, draft ONE tweet (≤280 chars, no hashtags) following the
-   preview/review template in `docs/editorial-template.md`.
+3. For each new fixture, draft ONE tweet (no hashtags) following the preview/review
+   template in `docs/editorial-template.md`. @cricdotcric is X Premium, so going over
+   280 chars is fine when the extra detail earns it (e.g. a rich review) — but stay
+   punchy; brevity is a feature, don't pad.
 4. Source ONE image with `node scripts/find-image.js "<query>"` (Brave image
    search; e.g. query `"England vs India ODI 2026 <player> batting"`). It returns
    candidates that already download cleanly. **VIEW the top candidates (Read the

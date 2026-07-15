@@ -12,8 +12,9 @@ function validateItem(item, queueBaseName) {
   if (!item.tweet || typeof item.tweet !== 'string' || !item.tweet.trim()) {
     throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: missing tweet text`);
   }
-  if (item.tweet.length > 280) {
-    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: tweet exceeds 280 chars`);
+  // @cricdotcric is X Premium (verified) — long posts allowed up to 25,000 chars.
+  if (item.tweet.length > 25000) {
+    throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: tweet exceeds 25000 chars`);
   }
   if (!item.date || !/^\d{4}-\d{2}-\d{2}$/.test(item.date)) {
     throw new Error(`Invalid queue item ${getItemId(item)} in ${queueBaseName}: invalid date`);
