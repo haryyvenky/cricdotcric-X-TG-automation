@@ -32,9 +32,14 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
    image) and pick one that satisfies ALL strict rules** (live action, format-correct
    kit, same two teams, within 3 years). If none qualify, DO NOT queue it — send a
    Telegram message flagging that the item needs a manual image, and skip.
-5. Append the item to `content/queue.json` with `status: "pending"` and a unique
-   `id` (e.g. `<series-id>-m<N>-preview`).
-6. Send the draft to Telegram:
+5. **FIRST** append the item to `content/queue.json` with `status: "pending"` and a
+   unique `id` (e.g. `<series-id>-m<N>-preview`), and SAVE the file. This MUST happen
+   and be flushed to disk **before** step 6 — never treat it as end-of-run cleanup.
+   Why: the always-on bot posts the instant the operator replies "approved", and they
+   often approve within seconds of the draft arriving. If the pending item isn't in
+   the queue yet, the bot sees nothing to approve ("Nothing pending to approve right
+   now") and the approval is lost. Persist first, notify second.
+6. **ONLY AFTER** the queue write is saved, send the draft to Telegram:
    `node scripts/telegram.js send --text-file <tmpfile> --image <imageUrl>`
    Record the returned `messageId` on the queue item as `telegramMessageId`.
 7. **Guarantee one post per day (evergreen fallback).** If, after steps 1–6, no
