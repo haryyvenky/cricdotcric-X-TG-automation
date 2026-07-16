@@ -151,6 +151,9 @@ Short on time? This is the 10-minute path through the repo, in order:
 5. **[`docs/RUNBOOK.md`](docs/RUNBOOK.md)** — how it's operated, including the actual
    failures hit during build-out and their fixes (auth token shadowed by an expired
    keychain entry; `launchd` PATH missing `node`). Shows real operational judgment.
+6. **[`docs/DESIGN_NOTES.md`](docs/DESIGN_NOTES.md)** — the honest version: trade-offs,
+   known limitations, and a deep-dive on the core principle ("the AI proposes,
+   deterministic code disposes"). Read this to see the *reasoning*, not just the code.
 
 **Design decisions worth noting**
 - **Bounded autonomy.** The model has a job, tools, and rules — not an open mandate.
