@@ -20,6 +20,13 @@ missed job on the next wake, but a machine closed all day means no post that day
 The always-on alternative is a cloud server, deliberately skipped to keep the system
 free and to keep secrets on-device.
 
+**A subtle failure mode learned in practice:** when the missed job *does* fire on
+wake, the drafting agent can spawn its work as a background subtask. `claude -p`
+otherwise terminates that subtask at a 600-second wait ceiling and exits `0` — a
+missed draft that *looks* like a success in the log. The fix is to make the runner
+wait for the work: `agent-run.sh` exports `CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0`
+so the process blocks until the draft actually completes rather than giving up early.
+
 ### 2. It runs on a Claude *subscription*, which has usage caps
 
 Drafting uses headless Claude on a Claude Pro plan, which has session/usage limits.

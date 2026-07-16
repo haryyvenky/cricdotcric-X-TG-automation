@@ -23,6 +23,11 @@ fi
 # Make sure no inherited gateway/key overrides the token.
 unset ANTHROPIC_BASE_URL ANTHROPIC_API_KEY 2>/dev/null || true
 
+# If the drafting agent spawns background tasks, `claude -p` otherwise terminates
+# them at a 600s wait ceiling and exits 0 with nothing produced (a missed draft
+# that looks like a success). 0 = wait indefinitely for the work to finish.
+export CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0
+
 MODE="${1:-draft}"
 TOPIC="${2:-}"
 cd "$REPO" || exit 1
