@@ -7,11 +7,12 @@
 # or export ANTHROPIC_API_KEY) — otherwise runs fail with HTTP 401.
 set -uo pipefail
 
-REPO="/Users/haryyvenky/cricdotcric-X-TG-automation"
-CLAUDE="/Users/haryyvenky/.local/bin/claude"
+# Resolve the repo root from this script's own location — no hard-coded paths.
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+CLAUDE="$(command -v claude || echo "$HOME/.local/bin/claude")"
 # Drafting model. "sonnet" is light on Pro usage limits; switch to "opus" for wittier copy.
 MODEL="sonnet"
-export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 
 # Non-interactive auth for the claude CLI. Token comes from `claude setup-token`
 # and is stored (600) at ~/.cricdotcric/claude-oauth-token — never in the repo.

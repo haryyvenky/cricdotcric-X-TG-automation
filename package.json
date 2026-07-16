@@ -2,7 +2,24 @@
   "name": "cricdotcric-x-tg-automation",
   "version": "1.0.0",
   "private": true,
-  "description": "Queue-driven X/Twitter automation for the cricdotcric cricket account.",
+  "description": "An autonomous cricket-tweeting agent: headless Claude drafts, a human approves over Telegram, a real-time bot posts to X. Runs locally via macOS launchd.",
+  "keywords": [
+    "llm-agent",
+    "claude",
+    "automation",
+    "twitter",
+    "x-api",
+    "telegram-bot",
+    "human-in-the-loop",
+    "launchd",
+    "cricket"
+  ],
+  "author": "Haryy Venky",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haryyvenky/cricdotcric-X-TG-automation.git"
+  },
   "type": "commonjs",
   "scripts": {
     "verify": "node scripts/x-post.js --account cricdotcric --verify",
