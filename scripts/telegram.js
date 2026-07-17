@@ -7,6 +7,12 @@ const API = 'https://api.telegram.org';
 const args = process.argv.slice(2);
 const cmd = args[0];
 
+// Stamped automatically onto every draft-for-approval message so the operator
+// always sees their reply options. Kept in code (not left to the drafting agent
+// to type) so it can never be forgotten or worded inconsistently.
+const APPROVAL_FOOTER =
+  '\n\n———\n✅ Approved — post as is\n✏️ Approved with corrections: [notes]\n❌ Rejected';
+
 function getArg(name) {
   const i = args.indexOf(name);
   return i >= 0 ? args[i + 1] : undefined;
@@ -44,7 +50,7 @@ async function main() {
     const textFile = getArg('--text-file');
     const image = getArg('--image');
     if (!textFile) throw new Error('send requires --text-file');
-    const caption = fs.readFileSync(textFile, 'utf8');
+    const caption = fs.readFileSync(textFile, 'utf8').replace(/\s+$/, '') + APPROVAL_FOOTER;
     let r;
     if (image) {
       r = await tg(cfg, 'sendPhoto', { chat_id: cfg.chatId, photo: image, caption });

@@ -42,6 +42,10 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
 6. **ONLY AFTER** the queue write is saved, send the draft to Telegram:
    `node scripts/telegram.js send --text-file <tmpfile> --image <imageUrl>`
    Record the returned `messageId` on the queue item as `telegramMessageId`.
+   The tweet body is the ONLY thing in `<tmpfile>` — do NOT add an
+   "Approved / Approved with corrections / Rejected" options footer yourself.
+   `telegram.js send` stamps that footer onto every draft automatically, so
+   typing your own would duplicate it.
 7. **Guarantee one post per day (evergreen fallback).** If, after steps 1–6, no
    fixture-based draft was produced for today (no watched match is upcoming or just
    finished), draft ONE evergreen cricket post instead — a stat, record, milestone,
