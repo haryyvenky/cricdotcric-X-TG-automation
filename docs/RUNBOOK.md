@@ -16,6 +16,13 @@ Pro subscription (no API key). Every tweet is human-approved.
 - **Anytime**: text the bot `/draft <topic>` for an ad-hoc draft.
 - **You reply `✅ Approved`** (or `❌ Rejected: <why>` / `✏️ Approved with corrections: <notes>`).
   On approval the daemon posts within ~1s and replies with the live link.
+  On a rejection or corrections it saves your feedback to the item and spawns
+  headless Claude (`agent-run.sh revise`) to redo the draft and resend it here for
+  approval — a few minutes, no manual step. Every draft message ends with the
+  `✅ / ✏️ / ❌` options footer (stamped by `telegram.js send`, not the AI).
+- **Trivia posts** (the evergreen daily fallback) open with `🏏 Trivia of the Day`;
+  match previews/reviews do not. Enforced in the skill and as a code backstop
+  (`triviaPrefixed` in `lib/queue-item.js`, applied at post time).
 
 ## Managing what gets covered
 

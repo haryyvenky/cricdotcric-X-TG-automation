@@ -59,8 +59,15 @@ Telegram `getUpdates` and reacts in real time:
 - **✅ Approved** (reply to a draft) → posts the pending item via the shared
   `scripts/lib/posting.js` (validate → download image → `x-post.js` → record state →
   Telegram confirmation with the live link).
-- **❌ Rejected / ✏️ corrections** → instant acknowledgement (redo happens in a
-  Claude session).
+- **❌ Rejected / ✏️ corrections** → saves the feedback onto the item, then spawns
+  `agent-run.sh revise <id> "<feedback>"` (headless Claude) to redo the draft and
+  resend it for approval. Same LLM-does-the-judgment split as `/draft`: the daemon is
+  pure Node, so anything needing revision is handed to the model, not faked.
+
+Every draft the daemon-adjacent flow sends carries a fixed `✅ / ✏️ / ❌` options
+footer, appended in code by `telegram.js send` (not hand-typed by the model, so it is
+never omitted). Trivia (evergreen) posts additionally open with `🏏 Trivia of the Day`,
+enforced in the skill and guaranteed by a `triviaPrefixed` backstop at post time.
 
 Supporting posting scripts (`post-queue.js` batch runner, `check-and-post.js`
 one-shot poller) share the same `lib/` and remain as manual/backup tools. Child
