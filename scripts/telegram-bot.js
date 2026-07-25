@@ -47,10 +47,21 @@ async function handle(cfg, msg) {
     } catch (e) {
       await P.sendMessage(cfg, `⚠️ Post failed: ${e.message}. Left pending.`);
     }
-  } else if (decision === 'rejected') {
-    await P.sendMessage(cfg, `❌ Rejection noted${reason ? `: ${reason}` : ''}. I'll redo it in the next Claude session (revisions need AI).`);
-  } else if (decision === 'corrections') {
-    await P.sendMessage(cfg, `✏️ Corrections noted${notes ? `: ${notes}` : ''}. I'll revise it in the next Claude session.`);
+  } else if (decision === 'rejected' || decision === 'corrections') {
+    // Revising needs the AI, which the always-on bot doesn't run — so, exactly
+    // like /draft, spawn headless Claude (agent-run.sh revise) to redo the draft
+    // and resend it here. Persist the feedback first so it's never lost.
+    if (!item) { await P.sendMessage(cfg, '🤔 Nothing pending to revise right now.'); return; }
+    const feedback = decision === 'rejected'
+      ? `REJECTED — redo the flagged part (copy and/or image). Reason: ${reason || '(none given)'}`
+      : `CORRECTIONS: ${notes || '(no notes given)'}`;
+    item.revisionNote = feedback;
+    P.saveQueue(queue);
+    await P.sendMessage(cfg, `${decision === 'rejected' ? '❌ Rejection' : '✏️ Corrections'} noted${(reason || notes) ? `: ${reason || notes}` : ''}. Revising now — I'll resend the updated draft here for approval shortly (a few minutes).`);
+    const { spawn } = require('child_process');
+    const path = require('path');
+    const child = spawn('/bin/bash', [path.join(__dirname, 'agent-run.sh'), 'revise', getItemId(item), feedback], { detached: true, stdio: 'ignore' });
+    child.unref();
   }
 }
 

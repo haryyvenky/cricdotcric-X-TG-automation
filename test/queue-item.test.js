@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { getItemId, validateItem } = require('../scripts/lib/queue-item');
+const { getItemId, validateItem, triviaPrefixed, TRIVIA_PREFIX } = require('../scripts/lib/queue-item');
 
 const valid = {
   id: 'x1', account: 'cricdotcric', tweet: 'A real tweet',
@@ -31,4 +31,21 @@ test('validateItem rejects bad date', () => {
 
 test('validateItem no longer blocks old placeholder copy', () => {
   assert.doesNotThrow(() => validateItem({ ...valid, tweet: 'IPL today: RCB vs SRH.' }, 'queue'));
+});
+
+test('triviaPrefixed stamps evergreen posts missing the line', () => {
+  const out = triviaPrefixed({ ...valid, type: 'evergreen', tweet: 'Kohli needs 4 runs today.' });
+  assert.strictEqual(out, `${TRIVIA_PREFIX}\n\nKohli needs 4 runs today.`);
+});
+
+test('triviaPrefixed does not double-stamp (case-insensitive, with or without emoji)', () => {
+  const withEmoji = { ...valid, type: 'evergreen', tweet: '🏏 Trivia of the Day\n\nA fact.' };
+  assert.strictEqual(triviaPrefixed(withEmoji), withEmoji.tweet);
+  const plain = { ...valid, type: 'evergreen', tweet: 'trivia of the day: a fact.' };
+  assert.strictEqual(triviaPrefixed(plain), plain.tweet);
+});
+
+test('triviaPrefixed leaves previews/reviews untouched', () => {
+  assert.strictEqual(triviaPrefixed({ ...valid, type: 'preview', tweet: 'ENG vs IND today.' }), 'ENG vs IND today.');
+  assert.strictEqual(triviaPrefixed({ ...valid, type: 'review', tweet: 'India won.' }), 'India won.');
 });
