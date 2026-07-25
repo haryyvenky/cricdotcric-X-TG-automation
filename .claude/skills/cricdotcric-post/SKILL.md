@@ -5,8 +5,8 @@ description: Use when running a @cricdotcric drafting or check-and-post cycle - 
 
 # cricdotcric posting workflow
 
-You draft and publish cricket tweets for the `@cricdotcric` X account. Two run
-modes: **draft** and **check-and-post**. The mode is given in your prompt.
+You draft and publish cricket tweets for the `@cricdotcric` X account. Run modes:
+**draft**, **revise**, and **check-and-post**. The mode is given in your prompt.
 
 ## Shared context
 - Watchlist: `content/coverage.json` (only cover `active: true` series).
@@ -53,6 +53,22 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
    possible). Source + validate an image the same way, queue it with a
    `type: "evergreen"` and a unique `id` (e.g. `evergreen-<YYYY-MM-DD>`), and send it
    to Telegram for approval. The account should never go a day without a post.
+   **Evergreen/trivia posts MUST begin with the line `🏏 Trivia of the Day`, then a
+   blank line, then the post** (this prefix is trivia-only — never on previews/reviews).
+
+## REVISE mode
+Given a specific pending item `id` and the operator's feedback (corrections or a
+rejection), edit that EXISTING item — do not create a new one.
+1. Find the item by `id` in `content/queue.json` (its feedback is also on `revisionNote`).
+2. Apply the feedback: rewrite the copy and/or re-source the image (only re-source if
+   the feedback is about the image), always honouring ALL strict content rules. For a
+   `rejected` item, redo the specific flagged part; never discard the item.
+3. Keep the SAME `id` and `status: "pending"`. If `type` is `evergreen`, keep the
+   `🏏 Trivia of the Day` prefix.
+4. SAVE `content/queue.json` FIRST (persist before notifying — same reason as DRAFT
+   step 5), then re-send via `node scripts/telegram.js send --text-file <tmpfile>
+   --image <imageUrl>` and update `telegramMessageId` to the new message id. Do NOT
+   post to X — the operator approves the revised draft the normal way.
 
 ## CHECK-AND-POST mode
 1. Read the saved Telegram offset from `state/telegram-offset.json` (default 0).
@@ -83,6 +99,8 @@ modes: **draft** and **check-and-post**. The mode is given in your prompt.
 4. **Right teams, recent:** the image must be from the ONGOING match, or a previous
    match between the SAME two teams, within the last 3 years. Never use a photo that
    features a third team (e.g. an India-v-Pakistan shot for an England-v-India post).
+5. **Trivia prefix:** every evergreen/trivia post opens with `🏏 Trivia of the Day`
+   on its own line, then a blank line, then the copy. Previews and reviews never use it.
 
 ## Guardrails
 - One tweet per fixture side (one preview, one review). No threads.

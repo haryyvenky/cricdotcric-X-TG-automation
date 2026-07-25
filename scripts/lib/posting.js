@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const { execFileSync } = require('child_process');
-const { getItemId, validateItem } = require('./queue-item');
+const { getItemId, validateItem, triviaPrefixed } = require('./queue-item');
 const { saveState } = require('./state');
 
 const repoRoot = path.resolve(__dirname, '..', '..');
@@ -65,6 +65,9 @@ async function downloadImage(item) {
 // Posts an approved item, records state, marks it posted, and sends a Telegram
 // confirmation with the live link. Returns { id, link }.
 async function postApproved(cfg, item, state) {
+  // Deterministic backstop: trivia (evergreen) posts always open with the
+  // "Trivia of the Day" line, even if the drafting AI omitted it.
+  item.tweet = triviaPrefixed(item);
   validateItem(item, 'queue.json');
   const imagePath = await downloadImage(item);
   const textPath = path.join(tmpDir, `${getItemId(item)}.txt`);
