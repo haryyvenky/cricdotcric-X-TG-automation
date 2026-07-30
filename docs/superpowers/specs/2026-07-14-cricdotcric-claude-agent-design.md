@@ -244,7 +244,8 @@ Pro subscription, no API key**. This section is the source of truth; see also
 ## Components (as built)
 
 - `scripts/agent-run.sh` — headless-Claude runner. Modes: `draft`, `adhoc "<topic>"`,
-  `check-and-post` (backup). Loads `CLAUDE_CODE_OAUTH_TOKEN`; `MODEL="sonnet"`.
+  `revise <id> "<feedback>"` (added; see Addendum 2), `check-and-post` (backup).
+  Loads `CLAUDE_CODE_OAUTH_TOKEN`; `MODEL="sonnet"`.
 - `scripts/telegram-bot.js` — real-time daemon (approvals + `/draft`).
 - `scripts/find-image.js` — Brave image search + validation.
 - `scripts/config.js` (+ Brave key), `scripts/lib/{queue-item,state,dates,telegram-parse,posting}.js`.
@@ -275,3 +276,45 @@ Pro subscription, no API key**. This section is the source of truth; see also
 - **`spawnSync node ENOENT`:** launchd's minimal `PATH` lacks `node`. Fixed by using
   `process.execPath` in `lib/posting.js` and `post-queue.js`.
 - **280-char rejection:** raised to 25,000 for the Premium account.
+
+# Implementation Addendum 2 — hardening (2026-07-16 → 07-30)
+
+Changes after the initial launch, driven by real operational issues:
+
+- **Missed-job silent no-op (fixed).** When launchd fired the missed 2 PM draft on
+  wake, headless Claude could run the drafting agent as a *background subtask* and
+  `claude -p` killed it at a 600s wait ceiling, exiting `0` with nothing produced.
+  Fix: `agent-run.sh` exports `CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0` (wait
+  indefinitely). See DESIGN_NOTES quirk #1.
+- **Approval lost to a race (fixed).** The drafter sent the Telegram draft *before*
+  writing the pending item to `queue.json`; an operator who approved within seconds
+  hit "Nothing pending". Skill now mandates **persist-to-queue first, notify second.**
+- **Approval-options footer moved into code.** The `✅/✏️/❌` reminder was hand-typed
+  by the AI and sometimes omitted. Now `telegram.js send` appends a constant
+  `APPROVAL_FOOTER` to every draft caption — identical every time, never forgotten.
+- **Corrections/rejections now auto-revise.** Previously the bot only acknowledged and
+  the operator's notes were discarded ("next Claude session" = a manual step). Now on
+  `❌ Rejected`/`✏️ corrections` the bot persists the feedback (`revisionNote`) and
+  spawns `agent-run.sh revise <id> "<feedback>"` (new **REVISE** mode) → headless
+  Claude redoes the draft and resends it for approval, mirroring the `/draft` flow.
+- **Trivia prefix for evergreen posts.** Evergreen/trivia posts open with
+  `🏏 Trivia of the Day`; previews/reviews never do. Enforced in the skill and
+  guaranteed by a deterministic `triviaPrefixed()` backstop (`lib/queue-item.js`,
+  applied in `postApproved`). +3 unit tests (26 total).
+- **Watchlist is curated, multi-series.** `content/coverage.json` now holds several
+  series with `active` toggles; finished series are set `active:false` (kept as
+  history) and current ones activated. The 2 PM job drafts only ONE fixture/day, so
+  overlapping active series are covered via `/draft` on the extra ones.
+
+## Known open issue (not yet fixed)
+
+- **Transient network failure mid-run is a silent no-op.** If headless Claude loses
+  connectivity during a scheduled run (`API Error: ENOTFOUND` / "Connection closed
+  mid-response"), it prints the error but still exits `0`, so the wrapper can't tell
+  success from failure and no post is produced (cost the 2026-07-29 post). A guard
+  that detects the failure and alerts/retries via Telegram is the next improvement.
+
+## Operational note
+
+`scripts/telegram-bot.js` is a long-running daemon — **after editing it, restart** so
+the new code loads: `launchctl kickstart -k gui/$(id -u)/com.cricdotcric.bot`.
