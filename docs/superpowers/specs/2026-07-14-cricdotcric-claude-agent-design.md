@@ -1,8 +1,12 @@
 # cricdotcric Claude Agent — Design Spec
 
 **Date:** 2026-07-14
-**Status:** Approved for planning
+**Status:** Historical design record — see [`docs/SPEC.md`](../../SPEC.md) for the current consolidated master spec
 **Author:** brainstorming session (Claude Code)
+
+> This document is the original pre-build design plus two as-built addenda; it shows
+> how the design evolved. For the current single source of truth, read
+> [`docs/SPEC.md`](../../SPEC.md).
 
 ## Purpose
 

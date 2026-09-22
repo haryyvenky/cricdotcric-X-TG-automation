@@ -136,9 +136,12 @@ to install, and [`docs/RUNBOOK.md`](docs/RUNBOOK.md) to operate.
 
 Short on time? This is the 10-minute path through the repo, in order:
 
-1. **[`docs/superpowers/specs/`](docs/superpowers/specs)** — the design spec. Written
-   and committed *before* any code. Shows how I scope an agent (watchlist not
-   "all cricket"), pick a human-in-the-loop model, and reason about trade-offs.
+0. **[`docs/SPEC.md`](docs/SPEC.md)** — the master spec: the whole system as built,
+   in one page. Start here for the current source of truth.
+1. **[`docs/superpowers/specs/`](docs/superpowers/specs)** — the original design spec
+   (+ as-built addenda). Written and committed *before* any code — shows how I scope
+   an agent (watchlist not "all cricket"), pick a human-in-the-loop model, and reason
+   about trade-offs, and how the design evolved.
 2. **[`.claude/skills/cricdotcric-post/SKILL.md`](.claude/skills/cricdotcric-post/SKILL.md)**
    — how the agent is actually programmed: the workflow and the *strict, enforced*
    editorial rules. This is the heart of the agent design.
