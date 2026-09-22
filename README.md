@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Live](https://img.shields.io/badge/live-%40cricdotcric-1da1f2)](https://x.com/cricdotcric)
 
+Built by **Haryy Venky** — [LinkedIn](https://www.linkedin.com/in/venkateshharish/)
+
 A production automation that runs a **real, live X/Twitter account**
 ([@cricdotcric](https://x.com/cricdotcric)): every day a **headless Claude agent**
 finds a cricket fixture, writes a tweet in a specific editorial voice, sources a
